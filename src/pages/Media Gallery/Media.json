@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "YouTube",
+    "videoUrl": "https://www.youtube.com/embed/s19BxFpoSd0",
+    "description": "Watch our latest video content on YouTube.",
+    "type": "youtube"
+  },
+  {
+    "id": 2,
+    "title": "Twitter (X)",
+    "videoUrl": "https://twitter.com/i/status/1706692556272545041",
+    "description": "Check out our video updates and short clips on X.",
+    "type": "twitter"
+  },
+  {
+    "id": 3,
+    "title": "Facebook",
+    "videoUrl": "https://www.facebook.com/20531316728/videos/10152454700553553",
+    "description": "Follow us on Facebook for live streams and videos.",
+    "type": "facebook"
+  }
+]

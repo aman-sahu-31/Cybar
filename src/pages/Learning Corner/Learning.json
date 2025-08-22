@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Digital Forensics: Tracking Hoax Bomb Threats",
+    "description": "This course covers digital forensics and OSINT techniques to track and analyze hoax bomb threats across social media, email, and online forums.",
+    "imageUrl": "https://akkaias.com/uploads/images/34.jpg",
+    "link": "https://www.trackinghoaxbombthreatsviadigitalchannels.com/course/1"
+  },
+  {
+    "id": 2,
+    "title": "Cybersecurity Essentials for Threat Intelligence",
+    "description": "Learn the foundational principles of cybersecurity, including network security, malware analysis, and threat intelligence to prevent and respond to digital threats.",
+    "imageUrl": "https://i.pinimg.com/736x/28/f3/73/28f373e858176484d004faa697e6051b.jpg",
+    "link": "https://www.trackinghoaxbombthreatsviadigitalchannels.com/course/2"
+  },
+  {
+    "id": 3,
+    "title": "OSINT Techniques for Threat Investigation",
+    "description": "Master open-source intelligence (OSINT) gathering methods to collect and analyze public data from the internet for threat investigation purposes.",
+    "imageUrl": "https://www.hackthebox.com/storage/blog/fWRTroc4OLpiWpBCXXoIbieB5aM8uViz.jpg",
+    "link": "https://www.trackinghoaxbombthreatsviadigitalchannels.com/course/3"
+  }
+]

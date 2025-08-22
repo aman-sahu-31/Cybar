@@ -1,62 +1,57 @@
-import React from "react";
+// import React from 'react';
+// import { FaHome, FaChartBar, FaFileAlt, FaBook, FaEnvelope, FaUser, FaBell, FaSearch } from 'react-icons/fa';
 
-function Footer() {
-  return (
-    <div className=" bg-gray-100">
-      {/* Navbar */}
-      <nav className="bg-blue-500 text-white shadow-md">
-        <div className="flex items-center justify-between px-3 ">
-          {/* Home */}
-          <a href="#" className="flex items-center font-bold hover:bg-blue-600 px-3 py-2 rounded">
-            🏠 Home
-          </a>
+// function Footer() {
+//   return (
+//     <footer className="bg-blue-800 text-white py-2">
+//       <div className="container mx-auto px-6 ">
+//         <div className="flex flex-col md:flex-row  justify-between items-center">
+          
+//           {/* Navigation Links */}
+//           <div className="flex flex-wrap justify-center gap-10 mb-4 md:mb-0">
+//             <a href="#" className="flex items-center hover:text-blue-300 transition-colors">
+//               <FaHome className="mr-2" />
+//               Home
+//             </a>
+//             <a href="#" className="flex items-center hover:text-blue-300 transition-colors">
+//               <FaChartBar className="mr-2" />
+//               Dashboard
+//             </a>
+//             <a href="#" className="flex items-center hover:text-blue-300 transition-colors">
+//               <FaFileAlt className="mr-2" />
+//               Reports
+//             </a>
+//             <a href="#" className="flex items-center hover:text-blue-300 transition-colors">
+//               <FaBook className="mr-2" />
+//               Resources
+//             </a>
+//             <a href="#" className="flex items-center hover:text-blue-300 transition-colors">
+//               <FaEnvelope className="mr-2" />
+//               Contact
+//             </a>
+//           </div>
 
-          {/* Register a Complaint (Dropdown) */}
-          <div className="relative group">
-            <button className="font-bold hover:bg-blue-600 px-3 py-2 rounded">
-              Register a Complaint +
-            </button>
-            <div className="absolute left-0 text-sm hidden group-hover:block bg-blue-600 text-white w-60 shadow-lg">
-              <a href="#" className="block px-4 py-2 hover:bg-blue-700">Women/Children Related Crime</a>
-              <a href="#" className="block px-4 py-2 hover:bg-blue-700">Financial Fraud</a>
-              <a href="#" className="block px-4 py-2 hover:bg-blue-700">Other Cyber Crime</a>
-            </div>
-          </div>
+//           {/* Icons */}
+//           <div className="flex items-center gap-6 space-x-4">
+//             <button className="p-2 rounded-full hover:bg-gray-700 transition-colors">
+//               <FaSearch className="text-lg" />
+//             </button>
+//             <button className="p-2 rounded-full hover:bg-gray-700 transition-colors">
+//               <FaBell className="text-lg" />
+//             </button>
+//             <button className="p-2 rounded-full hover:bg-gray-700 transition-colors">
+//               <FaUser className="text-lg" />
+//             </button>
+//           </div>
+//         </div>
 
-          {/* Track Complaint */}
-          <a href="#" className="font-bold hover:bg-blue-600 px-3 py-2 rounded">
-            Track your Complaint
-          </a>
+//         {/* Copyright Section */}
+//         {/* <div className="mt-6 text-center text-gray-400 text-sm">
+//           <p>© 2023 Your Company Name. All rights reserved.</p>
+//         </div> */}
+//       </div>
+//     </footer>
+//   );
+// }
 
-          {/* Report & Check Suspect (Dropdown) */}
-          <div className="relative group">
-            <button className="font-bold hover:bg-blue-600 px-3 py-2 rounded">
-              Report & Check Suspect +
-            </button>
-            <div className="absolute left-0 hidden group-hover:block bg-blue-600 w-60 shadow-lg">
-              <a href="#" className="block px-4 py-2 hover:bg-blue-700">Report Suspect</a>
-              <a href="#" className="block px-4 py-2 hover:bg-blue-700">Check Suspect</a>
-            </div>
-          </div>
-
-          {/* Cyber Volunteers */}
-          <a href="#" className="font-bold hover:bg-blue-600 px-3 py-2 rounded">
-            Cyber Volunteers +
-          </a>
-
-          {/* Learning Corner */}
-          <a href="#" className="font-bold hover:bg-blue-600 px-3 py-2 rounded">
-            Learning Corner +
-          </a>
-
-          {/* Contact Us */}
-          <a href="#" className="font-bold hover:bg-blue-600 px-3 py-2 rounded">
-            Contact Us
-          </a>
-        </div>
-      </nav>
-    </div>
-  );
-}
-
-export default Footer;
+// export default Footer;
