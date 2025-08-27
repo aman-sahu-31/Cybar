@@ -49,14 +49,19 @@ export default function FraudPrevention() {
   ];
 
   return (
-    <div className="bg-[#5a5e8f] text-white">
+    <div className="bg-slate-50 text-slate-800 min-h-screen">
       {/* ---------------- TOP HEADING ---------------- */}
-      <div className="py-16 px-6 max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-semibold mb-4">
+      <div className="py-20 px-6 max-w-6xl mx-auto text-center mb-16">
+        <div className="mb-8">
+          <span className="inline-block bg-blue-100 text-blue-700 px-6 py-3 rounded-full text-sm font-semibold">
+            Intelligence & Analytics
+          </span>
+        </div>
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">
           Unify Intelligence and Analytics to Better Protect the Complete
           Customer Journey
         </h2>
-        <p className="text-gray-300 max-w-3xl mx-auto">
+        <p className="text-slate-600 text-lg max-w-4xl mx-auto leading-relaxed">
           Digital wallets, cryptocurrencies and neo-banks are key targets for
           fraudsters looking to exploit gaps in business processes, putting
           digital-first strategies to the test. Darwinium unites operational
@@ -66,21 +71,23 @@ export default function FraudPrevention() {
       </div>
 
       {/* ---------------- ACCORDION + IMAGE ---------------- */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center px-6">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-6">
         {/* Left Accordions */}
-        <div className="space-y-4">
+        <div className="space-y-6">
           {topAccordions.map((item, index) => (
             <div
               key={index}
-              className="border-b border-gray-700 pb-2 cursor-pointer"
+              className="bg-white border border-slate-200 rounded-xl p-6 cursor-pointer hover:shadow-lg transition-shadow duration-300"
               onClick={() => toggleAccordion(index)}
             >
               <div className="flex justify-between items-center">
-                <h3 className="text-lg font-medium">{item.title}</h3>
-                <span>{openIndex === index ? "−" : "+"}</span>
+                <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
+                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                  {openIndex === index ? "−" : "+"}
+                </div>
               </div>
               {openIndex === index && (
-                <p className="text-gray-400 mt-2 text-sm">{item.content}</p>
+                <p className="text-slate-600 mt-4 text-base leading-relaxed">{item.content}</p>
               )}
             </div>
           ))}
@@ -91,20 +98,25 @@ export default function FraudPrevention() {
           <img
             src="https://www.darwinium.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fbjdg9lcf%2Fstaging%2F391b8d211ea12936ef8f78f24346eb99d848159c-1175x982.jpg%3Ffit%3Dmax%26auto%3Dformat&w=1920&q=75"
             alt="Analytics demo"
-            className="rounded-xl shadow-lg"
+            className="rounded-2xl shadow-lg border border-slate-200"
           />
         </div>
       </div>
 
       {/* ---------------- BOTTOM SECTION ---------------- */}
-      <div className="max-w-6xl mx-auto mt-20 grid grid-cols-1 md:grid-cols-2 gap-10 px-6">
+      <div className="max-w-6xl mx-auto mt-24 grid grid-cols-1 md:grid-cols-2 gap-12 px-6">
         {/* Left Text */}
-        <div>
-          <h2 className="text-2xl font-semibold mb-4">
+        <div className="bg-white border border-slate-200 rounded-2xl p-8">
+          <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h2 className="text-3xl font-bold mb-6 text-slate-900">
             Fintech Fraud Prevention Powered by Behavioral Intelligence
           </h2>
-          <p className="text-gray-300">
-            Darwinium’s edge-based architecture helps fintechs see the full
+          <p className="text-slate-600 text-lg leading-relaxed">
+            Darwinium's edge-based architecture helps fintechs see the full
             context of user behavior, identifying coercion, compromised
             accounts, and fraudulent AI agents in real-time, empowering
             businesses to act instantly without compromising customer
@@ -113,19 +125,21 @@ export default function FraudPrevention() {
         </div>
 
         {/* Right Accordions */}
-        <div className="space-y-4">
+        <div className="space-y-6">
           {bottomAccordions.map((item, index) => (
             <div
               key={index + 10}
-              className="border-b border-gray-700 pb-2 cursor-pointer"
+              className="bg-white border border-slate-200 rounded-xl p-6 cursor-pointer hover:shadow-lg transition-shadow duration-300"
               onClick={() => toggleAccordion(index + 10)}
             >
               <div className="flex justify-between items-center">
-                <h3 className="text-lg font-medium">{item.title}</h3>
-                <span>{openIndex === index + 10 ? "−" : "+"}</span>
+                <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
+                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                  {openIndex === index + 10 ? "−" : "+"}
+                </div>
               </div>
               {openIndex === index + 10 && (
-                <p className="text-gray-400 mt-2 text-sm">{item.content}</p>
+                <p className="text-slate-600 mt-4 text-base leading-relaxed">{item.content}</p>
               )}
             </div>
           ))}
@@ -133,45 +147,35 @@ export default function FraudPrevention() {
       </div>
 
       {/* ---------------- TESTIMONIAL SECTION ---------------- */}
-      <div
-        className="relative mt-20 py-16 px-6 flex items-center justify-center"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1673822212845-9d41e60891df?auto=format&fit=crop&w=1920&q=80')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/30"></div>
+      <div className="mt-20 py-16 px-6 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-blue-50 border border-blue-200 rounded-2xl shadow-lg p-10">
+            <p className="text-lg leading-relaxed mb-6 text-slate-700">
+              "Since implementing Darwinium, we've seen a significant improvement
+              in our ability to detect and respond to suspicious activities –
+              particularly around account takeover, mule detection and payment
+              fraud scenarios. The real-time alerts, device intelligence, and
+              behavioral analysis have proven to be extremely effective in helping
+              us safeguard our customer accounts."
+            </p>
 
-        {/* Testimonial Card */}
-        <div className="relative max-w-3xl bg-[#5a5e8f] rounded-2xl shadow-lg p-8 text-white">
-          <p className="text-lg leading-relaxed mb-6">
-            “Since implementing Darwinium, we’ve seen a significant improvement
-            in our ability to detect and respond to suspicious activities –
-            particularly around account takeover, mule detection and payment
-            fraud scenarios. The real-time alerts, device intelligence, and
-            behavioral analysis have proven to be extremely effective in helping
-            us safeguard our customer accounts.”
-          </p>
-
-          <div className="flex items-center gap-4">
-            <img
-              src="https://via.placeholder.com/50"
-              alt="Profile"
-              className="w-12 h-12 rounded-full"
-            />
-            <div>
-              <p className="font-medium">Dfirama Pandiyan</p>
-              <p className="text-sm text-gray-300">
-                Fraud Operations Lead at Boost
-              </p>
+            <div className="flex items-center gap-4">
               <img
-                src="https://seeklogo.com/images/B/boost-logo-7E64DA9ECF-seeklogo.com.png"
-                alt="Boost Logo"
-                className="h-6 mt-1"
+                src="https://via.placeholder.com/50"
+                alt="Profile"
+                className="w-12 h-12 rounded-full"
               />
+              <div>
+                <p className="font-medium text-slate-900">Dfirama Pandiyan</p>
+                <p className="text-sm text-slate-600">
+                  Fraud Operations Lead at Boost
+                </p>
+                <img
+                  src="https://seeklogo.com/images/B/boost-logo-7E64DA9ECF-seeklogo.com.png"
+                  alt="Boost Logo"
+                  className="h-6 mt-1"
+                />
+              </div>
             </div>
           </div>
         </div>

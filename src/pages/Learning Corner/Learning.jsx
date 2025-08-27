@@ -49,25 +49,41 @@ const useCases = [
 
 const Learning = () => {
   return (
-    <section className=" text-white bg-[#5a5e8f] py-16 px-6 md:px-16">
-      <div className="max-w-5xl mx-auto text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-semibold mb-4">Use Cases Darwinium Solves for Fintech</h2>
-        <p className="text-sm md:text-base text-gray-300 max-w-3xl mx-auto">
-          Darwinium is a cyberfraud prevention platform that helps fintechs to evaluate risk continuously across the entire customer lifecycle, from login to logout. By analyzing user behavior and customer intent signals, we help you make smarter, real-time decisions that protect your customers, and their accounts.
-        </p>
+    <section className="w-full text-gray-900 bg-gradient-to-br from-blue-50 via-slate-50 to-indigo-100 py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Subtle background decorations */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-blue-200/20 rounded-full translate-x-32 -translate-y-32 blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-indigo-200/15 rounded-full -translate-x-40 translate-y-40 blur-3xl"></div>
+      
+      <div className="w-full max-w-6xl mx-auto text-center mb-12 relative z-10">
+        <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-slate-200">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-slate-800 via-blue-700 to-indigo-700 bg-clip-text text-transparent">
+            Use Cases We Solve for Fintech
+          </h2>
+          <p className="text-base md:text-lg text-slate-600 w-full max-w-4xl mx-auto leading-relaxed">
+            Our comprehensive cyberfraud prevention platform helps fintechs evaluate risk continuously across the entire customer lifecycle, from login to logout. By analyzing user behavior and customer intent signals, we help you make smarter, real-time decisions that protect your customers and their accounts.
+          </p>
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
       {useCases.map(({ icon, title, desc }, i) => (
   <div
     key={i}
-    className="bg-black/30 bg-opacity-30 p-6 rounded-lg shadow-lg 
+    className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-slate-200
                transform transition-all duration-300 
-               hover:scale-105 hover:shadow-xl cursor-pointer"
+               hover:scale-105 hover:shadow-xl hover:bg-white cursor-pointer group"
   >
-    <div className="mb-4 text-purple-400">{icon}</div>
-    <h3 className="text-lg font-semibold mb-2">{title}</h3>
-    <p className="text-sm text-gray-300 leading-relaxed">{desc}</p>
+    <div className="mb-4 p-3 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 w-fit shadow-md">
+      <div className="text-white">
+        {icon}
+      </div>
+    </div>
+    <h3 className="text-lg font-bold mb-3 text-slate-800 group-hover:text-blue-700 transition-colors">
+      {title}
+    </h3>
+    <p className="text-sm text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors">
+      {desc}
+    </p>
   </div>
 ))}
 

@@ -30,28 +30,67 @@ export default function Tracking() {
   ];
 
   return (
-    <div className="bg-[#5a5e8f] text-white py-16 px-6">
+    <div className="bg-slate-50 text-slate-800 py-20 px-6 min-h-screen">
       {/* Heading */}
-      <div className="max-w-5xl mx-auto text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-semibold">
+      <div className="max-w-5xl mx-auto text-center mb-16">
+        <div className="mb-8">
+          <span className="inline-block bg-blue-100 text-blue-700 px-6 py-3 rounded-full text-sm font-semibold">
+            Advanced Fraud Prevention
+          </span>
+        </div>
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">
           Transform the Way You Detect and Prevent Fraud
         </h2>
+        <p className="text-slate-600 text-lg max-w-3xl mx-auto">
+          Leverage cutting-edge technology to protect your business with intelligent fraud detection and prevention systems.
+        </p>
       </div>
 
       {/* Features Grid */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         {features.map((feature, index) => (
           <div
             key={index}
-            className=" bg-black/30 bg-opacity-30 p-6 rounded-lg shadow-lg 
-               transform transition-all duration-300 
-               hover:scale-105 hover:shadow-xl cursor-pointer"
+            className="bg-white p-8 rounded-2xl shadow-lg border border-slate-200 hover:shadow-xl transition-shadow duration-300 group"
           >
-            <div className="mb-4">{feature.icon}</div>
-            <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-            <p className="text-gray-300 text-sm">{feature.description}</p>
+            {/* Icon Container */}
+            <div className="mb-6">
+              <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center shadow-md">
+                {React.cloneElement(feature.icon, { className: "w-7 h-7 text-white" })}
+              </div>
+            </div>
+            
+            {/* Content */}
+            <div>
+              <h3 className="text-xl font-bold mb-4 text-slate-900 group-hover:text-blue-700 transition-colors duration-300">
+                {feature.title}
+              </h3>
+              <p className="text-slate-600 text-base leading-relaxed">
+                {feature.description}
+              </p>
+            </div>
           </div>
         ))}
+      </div>
+
+      {/* Bottom CTA Section */}
+      <div className="max-w-4xl mx-auto text-center mt-20">
+        <div className="bg-white p-10 rounded-2xl shadow-lg border border-slate-200">
+          <h3 className="text-3xl font-bold mb-4 text-slate-900">
+            Ready to Secure Your Business?
+          </h3>
+          <p className="text-slate-600 mb-8 text-lg">
+            Join thousands of businesses that trust our advanced fraud prevention technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-colors duration-300 shadow-lg">
+              Get Started Today
+            </button>
+            <button className="px-8 py-3 border border-slate-300 text-slate-700 rounded-xl font-semibold hover:border-blue-600 hover:text-blue-600 transition-colors duration-300">
+              Learn More
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -26,7 +26,7 @@ const Navbar = () => {
       {/* Navbar */}
       <nav
         ref={navRef}
-        className="bg-gradient-to-r from-[#1a103d] to-[#0a0f1c]/60 px-6 py-4 flex items-center justify-between relative z-50 shadow-xl"
+         className="bg-gradient-to-r from-blue-900 to-blue-800/60 px-6 py-4 flex items-center justify-between relative z-50 shadow-xl"
       >
         {/* Logo */}
         <div className="flex items-center space-x-2">
@@ -49,14 +49,14 @@ const Navbar = () => {
 
               {/* Mega Dropdown */}
               <div
-                className={`absolute top-full left-0 mt-3 w-[700px] bg-gradient-to-r from-[#1a103d] to-[#0a0f1c] text-white shadow-lg rounded-xl p-6 grid grid-cols-3 gap-6 transform transition-all duration-300 origin-top ${
+                className={`absolute top-full left-0 mt-3 w-[700px] bg-gradient-to-r from-blue-900 to-blue-800 text-white shadow-lg rounded-xl p-6 grid grid-cols-3 gap-6 transform transition-all duration-300 origin-top ${
                   openMenu === menu
                     ? "scale-100 opacity-100 visible"
                     : "scale-95 opacity-0 invisible"
                 }`}
               >
                 {/* Solutions */}
-                <div className="p-4 rounded-lg bg-[#141029] hover:bg-[#1e1638] transition">
+                <div className="p-4 rounded-lg bg-blue-800/50 hover:bg-blue-700/70 transition">
                   <h3 className="text-gray-400 uppercase text-sm font-semibold mb-3">
                     Solutions
                   </h3>
@@ -78,7 +78,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Platform */}
-                <div className="p-4 rounded-lg bg-[#141029] hover:bg-[#1e1638] transition">
+                <div className="p-4 rounded-lg bg-blue-800/50 hover:bg-blue-700/70 transition">
                   <h3 className="text-gray-400 uppercase text-sm font-semibold mb-3">
                     Platform
                   </h3>
@@ -100,7 +100,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Resources */}
-                <div className="p-4 rounded-lg bg-[#141029] hover:bg-[#1e1638] transition">
+                <div className="p-4 rounded-lg bg-blue-800/50 hover:bg-blue-700/70 transition">
                   <h3 className="text-gray-400 uppercase text-sm font-semibold mb-3">
                     Resources
                   </h3>
@@ -125,7 +125,7 @@ const Navbar = () => {
           {simpleMenus.map((item, i) => (
             <button
               key={i}
-              className="hover:text-purple-300 transform transition-all duration-200 hover:scale-105"
+              className="hover:text-blue-600 transform transition-all duration-200 hover:scale-105"
             >
               {item}
             </button>
@@ -160,7 +160,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`absolute top-full left-0 w-full bg-[#0a0f1c] text-white flex flex-col items-start px-6 py-4 space-y-4 md:hidden transition-all duration-300 ${
+          className={`absolute top-full left-0 w-full bg-blue-800 text-white flex flex-col items-start px-6 py-4 space-y-4 md:hidden transition-all duration-300 ${
             mobileMenu
               ? "max-h-[600px] opacity-100"
               : "max-h-0 opacity-0 overflow-hidden"
@@ -192,7 +192,7 @@ const Navbar = () => {
       {/* ✅ Transparent Modal (Login / Signup / Demo) */}
       {modalType && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
-          <div className="bg-[#1a103d] text-white p-8 rounded-2xl w-[400px] shadow-lg relative">
+          <div className="bg-blue-900 text-white p-8 rounded-2xl w-[400px] shadow-lg relative">
             {/* Close Btn */}
             <button
               onClick={() => setModalType(null)}
