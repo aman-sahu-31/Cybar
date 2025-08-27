@@ -115,8 +115,8 @@ export default function System() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo + Copyright */}
           <div>
-            <h3 className="text-white font-bold mb-3">Darwinium</h3>
-            <p className="text-sm">2025 Darwinium. All rights reserved.</p>
+            <h3 className="text-white font-bold mb-3">Tech Ninja</h3>
+            <p className="text-sm">2025 Tech Ninja. All rights reserved.</p>
             <div className="flex space-x-4 mt-3">
               <a href="#" className="hover:text-white transition-colors">🔗</a>
               <a href="#" className="hover:text-white transition-colors">🔗</a>
