@@ -1,295 +1,186 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Menu, X } from "lucide-react";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import tech from "../../assets/tech-ninja 1.png";
 
+// Recharts
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+  PieChart,
+  Pie,
+  Cell,
+  Legend,
+} from "recharts";
+
+// ---------------- Navbar ----------------
 const Navbar = () => {
-  const [openMenu, setOpenMenu] = useState(null);
-  const [mobileMenu, setMobileMenu] = useState(false);
-  const [modalType, setModalType] = useState(null); // "login" | "signup" | "demo"
-  const navRef = useRef(null);
-
-  const dropdownMenus = ["Solutions", "Platform", "Resources"];
-  const simpleMenus = ["Documentation", "Partners", "Contact"];
-
-  // ✅ Close dropdown when clicking outside
-  useEffect(() => {
-    function handleClickOutside(e) {
-      if (navRef.current && !navRef.current.contains(e.target)) {
-        setOpenMenu(null);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
-
   return (
-    <>
-      {/* Navbar */}
-      <nav
-        ref={navRef}
-         className="bg-gradient-to-r from-blue-900 to-blue-800/60 px-6 py-4 flex items-center justify-between relative z-50 shadow-xl"
-      >
-        {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <div className="w-9 h-9 rounded-full flex items-center justify-center bg-gradient-to-r from-purple-400 to-blue-400">
-            <span className="text-white font-bold">TN</span>
-          </div>
-          <span className="text-white text-lg font-semibold">TECH NINJA</span>
-        </div>
-
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8 text-white">
-          {dropdownMenus.map((menu, idx) => (
-            <div className="relative" key={idx}>
-              <button
-                onClick={() => setOpenMenu(openMenu === menu ? null : menu)}
-                className="hover:text-purple-300 transform transition-all duration-200 hover:scale-105 flex items-center"
-              >
-                {menu} <span className="ml-1">▾</span>
-              </button>
-
-              {/* Mega Dropdown */}
-              <div
-                className={`absolute top-full left-0 mt-3 w-[700px] bg-gradient-to-r from-blue-900 to-blue-800 text-white shadow-lg rounded-xl p-6 grid grid-cols-3 gap-6 transform transition-all duration-300 origin-top ${
-                  openMenu === menu
-                    ? "scale-100 opacity-100 visible"
-                    : "scale-95 opacity-0 invisible"
-                }`}
-              >
-                {/* Solutions */}
-                <div className="p-4 rounded-lg bg-blue-800/50 hover:bg-blue-700/70 transition">
-                  <h3 className="text-gray-400 uppercase text-sm font-semibold mb-3">
-                    Solutions
-                  </h3>
-                  <ul className="space-y-2">
-                    {[
-                      "Account Security",
-                      "Fraud Prevention",
-                      "Scam Detection",
-                      "Abuse Prevention",
-                    ].map((item, i) => (
-                      <li
-                        key={i}
-                        className="hover:text-purple-300 cursor-pointer transition-colors"
-                      >
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Platform */}
-                <div className="p-4 rounded-lg bg-blue-800/50 hover:bg-blue-700/70 transition">
-                  <h3 className="text-gray-400 uppercase text-sm font-semibold mb-3">
-                    Platform
-                  </h3>
-                  <ul className="space-y-2">
-                    {[
-                      "API & SDKs",
-                      "Real-time Decisioning",
-                      "Integrations",
-                      "Analytics",
-                    ].map((item, i) => (
-                      <li
-                        key={i}
-                        className="hover:text-purple-300 cursor-pointer transition-colors"
-                      >
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Resources */}
-                <div className="p-4 rounded-lg bg-blue-800/50 hover:bg-blue-700/70 transition">
-                  <h3 className="text-gray-400 uppercase text-sm font-semibold mb-3">
-                    Resources
-                  </h3>
-                  <ul className="space-y-2">
-                    {["Case Studies", "Documentation", "Blog", "Webinars"].map(
-                      (item, i) => (
-                        <li
-                          key={i}
-                          className="hover:text-purple-300 cursor-pointer transition-colors"
-                        >
-                          {item}
-                        </li>
-                      )
-                    )}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          ))}
-
-          {/* Simple Links */}
-          {simpleMenus.map((item, i) => (
-            <button
-              key={i}
-              className="hover:text-blue-600 transform transition-all duration-200 hover:scale-105"
-            >
-              {item}
-            </button>
-          ))}
-        </div>
-
-        {/* Right Side CTA */}
-        <div className="hidden md:flex space-x-4">
-          <button
-            onClick={() => setModalType("login")}
-            className="px-4 py-2 text-white border border-purple-400 rounded-lg hover:bg-purple-500 hover:text-black transform transition-all duration-200 hover:scale-105"
-          >
-            Sign In
-          </button>
-          <button
-            onClick={() => setModalType("demo")}
-            className="px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transform transition-all duration-200 hover:scale-105"
-          >
-            Book Demo
-          </button>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center">
-          <button
-            onClick={() => setMobileMenu(!mobileMenu)}
-            className="text-white"
-          >
-            {mobileMenu ? <X size={28} /> : <Menu size={28} />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        <div
-          className={`absolute top-full left-0 w-full bg-blue-800 text-white flex flex-col items-start px-6 py-4 space-y-4 md:hidden transition-all duration-300 ${
-            mobileMenu
-              ? "max-h-[600px] opacity-100"
-              : "max-h-0 opacity-0 overflow-hidden"
-          }`}
-        >
-          {[...dropdownMenus, ...simpleMenus].map((item, i) => (
-            <button
-              key={i}
-              className="w-full text-left py-2 hover:text-purple-300 transform transition-all duration-200 hover:scale-105"
-            >
-              {item}
-            </button>
-          ))}
-          <button
-            onClick={() => setModalType("login")}
-            className="w-full text-left py-2 hover:text-purple-300"
-          >
-            Sign In
-          </button>
-          <button
-            onClick={() => setModalType("demo")}
-            className="w-full text-left py-2 bg-purple-500 rounded-lg hover:bg-purple-600 transform transition-all duration-200 hover:scale-105"
-          >
-            Book Demo
-          </button>
-        </div>
-      </nav>
-
-      {/* ✅ Transparent Modal (Login / Signup / Demo) */}
-      {modalType && (
-        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
-          <div className="bg-blue-900 text-white p-8 rounded-2xl w-[400px] shadow-lg relative">
-            {/* Close Btn */}
-            <button
-              onClick={() => setModalType(null)}
-              className="absolute top-3 right-3 text-gray-300 hover:text-white"
-            >
-              <X />
-            </button>
-
-            {/* Switch between modal types */}
-            {modalType === "login" && (
-              <>
-                <h2 className="text-2xl font-bold mb-4">Login</h2>
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="w-full mb-3 p-2 rounded bg-[#0a0f1c] border border-gray-600"
-                />
-                <input
-                  type="password"
-                  placeholder="Password"
-                  className="w-full mb-3 p-2 rounded bg-[#0a0f1c] border border-gray-600"
-                />
-                <button className="w-full bg-purple-500 py-2 rounded-lg hover:bg-purple-600">
-                  Login
-                </button>
-                <p className="text-sm mt-3">
-                  Don’t have an account?{" "}
-                  <button
-                    onClick={() => setModalType("signup")}
-                    className="text-purple-300 hover:underline"
-                  >
-                    Sign Up
-                  </button>
-                </p>
-              </>
-            )}
-
-            {modalType === "signup" && (
-              <>
-                <h2 className="text-2xl font-bold mb-4">Sign Up</h2>
-                <input
-                  type="text"
-                  placeholder="Full Name"
-                  className="w-full mb-3 p-2 rounded bg-[#0a0f1c] border border-gray-600"
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="w-full mb-3 p-2 rounded bg-[#0a0f1c] border border-gray-600"
-                />
-                <input
-                  type="password"
-                  placeholder="Password"
-                  className="w-full mb-3 p-2 rounded bg-[#0a0f1c] border border-gray-600"
-                />
-                <button className="w-full bg-purple-500 py-2 rounded-lg hover:bg-purple-600">
-                  Create Account
-                </button>
-                <p className="text-sm mt-3">
-                  Already have an account?{" "}
-                  <button
-                    onClick={() => setModalType("login")}
-                    className="text-purple-300 hover:underline"
-                  >
-                    Login
-                  </button>
-                </p>
-              </>
-            )}
-
-            {modalType === "demo" && (
-              <>
-                <h2 className="text-2xl font-bold mb-4">Book a Demo</h2>
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full mb-3 p-2 rounded bg-[#0a0f1c] border border-gray-600"
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="w-full mb-3 p-2 rounded bg-[#0a0f1c] border border-gray-600"
-                />
-                <textarea
-                  placeholder="Message"
-                  className="w-full mb-3 p-2 rounded bg-[#0a0f1c] border border-gray-600"
-                ></textarea>
-                <button className="w-full bg-purple-500 py-2 rounded-lg hover:bg-purple-600">
-                  Submit
-                </button>
-              </>
-            )}
+    <div className="w-full shadow-md shadow-gray-400">
+      {/* Logo + Department */}
+      <div className="flex justify-between items-center px-6 py-2">
+        <div className="flex items-center space-x-4">
+          <img src={tech} alt="logo" className="w-16 h-16" />
+          <div>
+            <h1 className="text-xl font-bold">संदिग्ध लेन-देन निष्क्रियता</h1>
+            <h1 className="text-lg font-bold">Suspicious Transaction Detection</h1>
           </div>
         </div>
-      )}
-    </>
+        <div className="flex space-x-4">
+          <img
+            src="https://dor.gov.in/sites/default/files/inline-images/make-india.png"
+            alt="makeinindia"
+            className="h-10"
+          />
+          <img
+            src="https://dor.gov.in/sites/default/files/inline-images/g20.png"
+            alt="g20"
+            className="h-10"
+          />
+          <img
+            src="https://dor.gov.in/sites/default/files/inline-images/swachbharat.png"
+            alt="swachh"
+            className="h-10"
+          />
+        </div>
+      </div>
+
+      {/* Navigation Bar */}
+      <div className="flex gap-6 text-white px-10 py-3 bg-orange-600">
+        <NavLink to="/" className="hover:underline">
+          Home
+        </NavLink>
+        <NavLink to="/dashboard" className="hover:underline">
+          Dashboard
+        </NavLink>
+        <NavLink to="/About" className="hover:underline">
+          About Us
+        </NavLink>
+        <NavLink to={'/Divisions'} className="hover:underline">
+          Divisions
+        </NavLink>
+        <NavLink to={'/Rules'} className="hover:underline">
+          Act & Rules
+        </NavLink>
+        <NavLink to={'/Data'} className="hover:underline">
+          Data & Statistics
+        </NavLink>
+        <NavLink to={'/EmployeesCorner'} className="hover:underline">
+          Employees Corner
+        </NavLink>
+        <NavLink to={'/RTI'} className="hover:underline">
+          RTI
+        </NavLink>
+        <NavLink to={'/GrievanceRedressal'} className="hover:underline">
+          Grievance Redressal
+        </NavLink>
+      </div>
+    </div>
   );
 };
+
+// ---------------- Dashboard Cards ----------------
+// const DashboardCards = () => {
+//   const cards = [
+//     { title: "Critical Alerts", value: 245, color: "bg-red-700" },
+//     { title: "High Level Alerts", value: 39, color: "bg-orange-600" },
+//     { title: "Medium Level Alerts", value: 10, color: "bg-yellow-500" },
+//     { title: "Low Level Alerts", value: 50, color: "bg-green-600" },
+//     { title: "Very Low-Level Alerts", value: 220, color: "bg-blue-600" },
+//   ];
+
+//   return (
+//     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 px-10 py-6">
+//       {cards.map((card, index) => (
+//         <div
+//           key={index}
+//           className={`p-6 rounded-lg shadow-lg text-white ${card.color} hover:scale-105 transition-transform`}
+//         >
+//           <h3 className="text-lg font-semibold mb-2">{card.title}</h3>
+//           <p className="text-3xl font-bold">{card.value}</p>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
+
+// // ---------------- Dashboard Charts ----------------
+// const DashboardCharts = () => {
+//   const lineData = [
+//     { month: "Feb", Critical: 100, High: 80, Medium: 50, Low: 70, VeryLow: 120 },
+//     { month: "Mar", Critical: 150, High: 100, Medium: 70, Low: 90, VeryLow: 160 },
+//     { month: "Apr", Critical: 250, High: 200, Medium: 100, Low: 180, VeryLow: 220 },
+//     { month: "May", Critical: 180, High: 150, Medium: 90, Low: 130, VeryLow: 200 },
+//     { month: "Jun", Critical: 300, High: 250, Medium: 150, Low: 200, VeryLow: 400 },
+//   ];
+
+//   const pieData = [
+//     { name: "Critical", value: 19, color: "#b91c1c" },
+//     { name: "High", value: 21, color: "#f97316" },
+//     { name: "Medium", value: 20, color: "#facc15" },
+//     { name: "Low", value: 21, color: "#4ade80" },
+//     { name: "Very Low", value: 19, color: "#22c55e" },
+//   ];
+
+//   return (
+//     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 px-10 py-6">
+//       {/* Line Chart */}
+//       <div className="bg-white p-6 rounded-xl shadow-lg">
+//         <h2 className="text-lg font-semibold mb-4 text-blue-600">Transactions</h2>
+//         <p className="text-sm text-gray-500 mb-2">Total Transactions: 1400 (Year 2023)</p>
+//         <ResponsiveContainer width="100%" height={300}>
+//           <LineChart data={lineData}>
+//             <XAxis dataKey="month" />
+//             <YAxis />
+//             <Tooltip />
+//             <Line type="monotone" dataKey="Critical" stroke="#b91c1c" strokeWidth={2} />
+//             <Line type="monotone" dataKey="High" stroke="#f97316" strokeWidth={2} />
+//             <Line type="monotone" dataKey="Medium" stroke="#facc15" strokeWidth={2} />
+//             <Line type="monotone" dataKey="Low" stroke="#4ade80" strokeWidth={2} />
+//             <Line type="monotone" dataKey="VeryLow" stroke="#22c55e" strokeWidth={2} />
+//           </LineChart>
+//         </ResponsiveContainer>
+//       </div>
+
+//       {/* Pie Chart */}
+//       <div className="bg-white p-6 rounded-xl shadow-lg">
+//         <h2 className="text-lg font-semibold mb-4 text-blue-600">Alerts by Level</h2>
+//         <ResponsiveContainer width="100%" height={300}>
+//           <PieChart>
+//             <Pie
+//               data={pieData}
+//               cx="50%"
+//               cy="50%"
+//               innerRadius={60}
+//               outerRadius={100}
+//               paddingAngle={5}
+//               dataKey="value"
+//             >
+//               {pieData.map((entry, index) => (
+//                 <Cell key={`cell-${index}`} fill={entry.color} />
+//               ))}
+//             </Pie>
+//             <Legend />
+//             <Tooltip />
+//           </PieChart>
+//         </ResponsiveContainer>
+//       </div>
+//     </div>
+//   );
+// };
+
+// // ---------------- Main Dashboard Page ----------------
+// const DashboardPage = () => {
+//   return (
+//     <div className="bg-gray-100 min-h-screen">
+//       <Navbar />
+//       <DashboardCards />
+//       <DashboardCharts />
+//     </div>
+//   );
+// };
 
 export default Navbar;

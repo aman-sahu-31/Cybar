@@ -38,7 +38,7 @@ export default function Tracking() {
             Advanced Fraud Prevention
           </span>
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">
+        <h2 className="text-4xl md:text-4xl font-bold mb-6 text-slate-900">
           Transform the Way You Detect and Prevent Fraud
         </h2>
         <p className="text-slate-600 text-lg max-w-3xl mx-auto">
