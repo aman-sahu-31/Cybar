@@ -4,12 +4,13 @@ import Learning from '../pages/Learning Corner/Feacture'
 import Media from '../pages/Media Gallery/Media'
 import System from '../pages/System-working/System'
 import Tracking from '../pages/System-working/Tracking'
+import ImgSlide from './ImgSlide'
 
 function Home() {
   return (
     <>
     <div>
-        <Card />
+        <ImgSlide />
         <Learning/>
         <Tracking/>
         <Media/>
