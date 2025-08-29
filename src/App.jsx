@@ -8,7 +8,7 @@ import Divisions from "./Divisions";   // ✅ fixed path
 import Rules from "./pages/Rules";           
 import Data from "./pages/Data";             
 import EmployeesCorner from "./pages/EmployeesCorner";
-import RTI from "./pages/RTI";
+import RTI from "./pages/Rti";
 import GrievanceRedressal from "./pages/GrievanceRedressal";
 import AccountFraud from "./Components/Account Fraud/AccountFraud";
 import AccountTakeover from "./Components/AccountTakeover/AccountTakeover";
