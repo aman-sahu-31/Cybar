@@ -47,29 +47,22 @@ const useCases = [
   },
 ];
 
-const Learning = () => {
+const Feature = () => {
   return (
-    <section className="w-full text-gray-900 bg-gradient-to-br from-blue-50 via-slate-50 to-indigo-100 py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <section className="w-full text-gray-900 bg-gradient-to-br py-3 from-blue-50 via-slate-50 to-indigo-100    px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Subtle background decorations */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-blue-200/20 rounded-full translate-x-32 -translate-y-32 blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-indigo-200/15 rounded-full -translate-x-40 translate-y-40 blur-3xl"></div>
-      
-      <div className="w-full max-w-6xl mx-auto text-center mb-12 relative z-10">
-        <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-lg border border-slate-200">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-slate-800 via-blue-700 to-indigo-700 bg-clip-text text-transparent">
-            Use Cases We Solve for Fintech
-          </h2>
-          <p className="text-base md:text-lg text-slate-600 w-full max-w-4xl mx-auto leading-relaxed">
-            Our comprehensive cyberfraud prevention platform helps fintechs evaluate risk continuously across the entire customer lifecycle, from login to logout. By analyzing user behavior and customer intent signals, we help you make smarter, real-time decisions that protect your customers and their accounts.
-          </p>
-        </div>
+
+      <div className="w-full text-blue-600 max-w-6xl mx-auto text-center mb-7 relative z-10">
+       <h1 className="font-bold text-5xl ">Features</h1>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
       {useCases.map(({ icon, title, desc }, i) => (
   <div
     key={i}
-    className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-slate-200
+    className="bg-white/80 backdrop-blur-sm p-6 mb-10 rounded-xl shadow-lg border border-slate-200
                transform transition-all duration-300 
                hover:scale-105 hover:shadow-xl hover:bg-white cursor-pointer group"
   >
@@ -92,4 +85,4 @@ const Learning = () => {
   );
 };
 
-export default Learning;
+export default Feature;

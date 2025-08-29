@@ -49,10 +49,10 @@ export default function FraudPrevention() {
   ];
 
   return (
-    <div className="bg-slate-50 text-slate-800 min-h-screen">
+    <div className="bg-gray-200 pb-10 text-slate-800 min-h-screen">
       {/* ---------------- TOP HEADING ---------------- */}
-      <div className="py-20 px-6 max-w-6xl mx-auto text-center mb-16">
-        <div className="mb-8">
+      <div className="py-6 px-6 max-w-6xl mx-auto text-center mb-8">
+        <div className="mb-5">
           <span className="inline-block bg-blue-100 text-blue-700 px-6 py-3 rounded-full text-sm font-semibold">
             Intelligence & Analytics
           </span>
@@ -61,7 +61,7 @@ export default function FraudPrevention() {
           Unify Intelligence and Analytics to Better Protect the Complete
           Customer Journey
         </h2>
-        <p className="text-slate-600 text-lg max-w-4xl mx-auto leading-relaxed">
+        <p className="text-slate-600 text-md max-w-4xl mx-auto leading-relaxed">
           Digital wallets, cryptocurrencies and neo-banks are key targets for
           fraudsters looking to exploit gaps in business processes, putting
           digital-first strategies to the test. Darwinium unites operational
@@ -125,11 +125,11 @@ export default function FraudPrevention() {
         </div>
 
         {/* Right Accordions */}
-        <div className="space-y-6">
+        <div className="space-y-6   ">
           {bottomAccordions.map((item, index) => (
             <div
               key={index + 10}
-              className="bg-white border border-slate-200 rounded-xl p-6 cursor-pointer hover:shadow-lg transition-shadow duration-300"
+              className="bg-white border  border-slate-200 rounded-xl p-6 cursor-pointer hover:shadow-lg transition-shadow duration-300"
               onClick={() => toggleAccordion(index + 10)}
             >
               <div className="flex justify-between items-center">
@@ -147,39 +147,7 @@ export default function FraudPrevention() {
       </div>
 
       {/* ---------------- TESTIMONIAL SECTION ---------------- */}
-      <div className="mt-20 py-16 px-6 bg-white">
-        <div className="max-w-3xl mx-auto">
-          <div className="bg-blue-50 border border-blue-200 rounded-2xl shadow-lg p-10">
-            <p className="text-lg leading-relaxed mb-6 text-slate-700">
-              "Since implementing Darwinium, we've seen a significant improvement
-              in our ability to detect and respond to suspicious activities –
-              particularly around account takeover, mule detection and payment
-              fraud scenarios. The real-time alerts, device intelligence, and
-              behavioral analysis have proven to be extremely effective in helping
-              us safeguard our customer accounts."
-            </p>
-
-            <div className="flex items-center gap-4">
-              <img
-                src="https://via.placeholder.com/50"
-                alt="Profile"
-                className="w-12 h-12 rounded-full"
-              />
-              <div>
-                <p className="font-medium text-slate-900">Dfirama Pandiyan</p>
-                <p className="text-sm text-slate-600">
-                  Fraud Operations Lead at Boost
-                </p>
-                <img
-                  src="https://seeklogo.com/images/B/boost-logo-7E64DA9ECF-seeklogo.com.png"
-                  alt="Boost Logo"
-                  className="h-6 mt-1"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+     
     </div>
   );
 }

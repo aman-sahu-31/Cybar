@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './Header/Navbar'
 import Card from './ImgSlide'
-import Learning from '../pages/Learning Corner/Learning'
+import Learning from '../pages/Learning Corner/Feacture'
 import Media from '../pages/Media Gallery/Media'
 // import Footer from '../pages/Footer'
 import System from '../pages/System-working/System'

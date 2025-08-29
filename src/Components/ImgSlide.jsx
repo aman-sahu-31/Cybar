@@ -3,10 +3,9 @@ import { FaCircle } from "react-icons/fa";
 import { ShieldAlert, AlertTriangle, Eye } from "lucide-react";
 
 const images = [
-  "https://i.pinimg.com/736x/ed/74/80/ed74807dccbf24fc90707ec64473fcf3.jpg",
-  "https://i.pinimg.com/736x/09/b1/10/09b110561e7d21899f0ad2f779ef0f0f.jpg",
-  "https://media.licdn.com/dms/image/v2/D4D12AQGodKLFhYvHJw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1699185454929?e=2147483647&v=beta&t=HkaPQBH2cdxnCAugBQbczPDQSWH7Gr36vVl3lzgM_mU",
-  "https://media.licdn.com/dms/image/v2/D4D12AQGodKLFhYvHJw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1699185454929?e=2147483647&v=beta&t=HkaPQBH2cdxnCAugBQbczPDQSWH7Gr36vVl3lzgM_mU"
+  "https://financialcrimeacademy.org/wp-content/uploads/2023/05/1-17-1536x864.jpg",
+  "https://www.niceactimize.com/blog/wp-content/uploads/2021/12/A-woman-finding-suspicious-activity-in-currency-transaction-report.png.webp",
+  "https://res.cloudinary.com/youverifyhq/image/upload/v1740559357/Suspicious_Transaction_Reporting_3be3329701.jpg"
 ];
 
 function ImgSlide() {
@@ -23,13 +22,13 @@ function ImgSlide() {
   return (
     <div className="relative w-full pb-5   mx-auto">
       {/* Slides */}
-      <div className="overflow-hidden w-full  h-110 ">
+      <div className="overflow-hidden w-full  h-120 ">
         {images.map((img, index) => (
           <img
             key={index}
             src={img}
             alt={`Slide ${index + 1}`}
-            className={`w-full transition-transform object-cover duration-700 ${index === current ? "block" : "hidden"}`}
+            className={`w-full transition-transform object-center h-120 duration-700 ${index === current ? "block" : "hidden"}`}
           />
         ))}
       </div>
