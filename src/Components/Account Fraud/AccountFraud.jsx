@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ShieldAlert, AlertTriangle, Bot, Lock, Eye, Users, ChevronDown, ChevronUp, BarChart3, BookOpen, Download, Mail } from "lucide-react";
+import { ShieldAlert, AlertTriangle, Bot, Lock, Eye, Users, ChevronDown, ChevronUp, BarChart3, BookOpen, Download, Mail, Shield, TrendingUp, Phone } from "lucide-react";
 
 function AccountFraud() {
   const [openSection, setOpenSection] = useState(null);
@@ -15,117 +15,154 @@ function AccountFraud() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-slate-50 to-indigo-100 px-6 py-12">
       {/* Header Section */}
-      <div className="max-w-5xl mx-auto text-center mb-12">
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-800 mb-4">
-          National Account Fraud Awareness Initiative
-        </h1>
-        <p className="text-lg text-slate-600 leading-relaxed max-w-3xl mx-auto">
-          Account fraud is one of the fastest-growing financial crimes affecting citizens nationwide. 
-          This initiative aims to educate individuals, businesses, and organizations about prevention 
-          strategies to create a safer financial environment for everyone.
-        </p>
+      <div className="max-w-6xl mx-auto text-center mb-12">
+        <div className="bg-gradient-to-r from-orange-500 via-white to-green-500 p-1 rounded-3xl mb-8">
+          <div className="bg-white rounded-3xl p-8">
+            <div className="flex items-center justify-center mb-4">
+              <Shield className="w-12 h-12 text-orange-500 mr-4" />
+              <h1 className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-orange-600 to-green-600 bg-clip-text text-transparent">
+                भारतीय खाता धोखाधड़ी जागरूकता
+              </h1>
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-700 mb-4">
+              Indian Account Fraud Awareness Initiative
+            </h2>
+            <p className="text-lg text-slate-600 leading-relaxed max-w-4xl mx-auto">
+              डिजिटल इंडिया के युग में खाता धोखाधड़ी एक तेजी से बढ़ता हुआ साइबर अपराध है। यह पहल नागरिकों, व्यवसायों और संगठनों को 
+              रोकथाम रणनीतियों के बारे में शिक्षित करने और सभी के लिए एक सुरक्षित वित्तीय वातावरण बनाने का लक्ष्य रखती है।
+            </p>
+            <div className="mt-6 flex items-center justify-center space-x-4">
+              <div className="bg-orange-100 px-4 py-2 rounded-full">
+                <span className="text-orange-700 font-semibold text-sm">🇮🇳 Digital India Initiative</span>
+              </div>
+              <div className="bg-green-100 px-4 py-2 rounded-full">
+                <span className="text-green-700 font-semibold text-sm">🛡️ Cyber Suraksha</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Statistics Section */}
       <section className="max-w-6xl mx-auto mb-16">
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8">
-          <h2 className="text-2xl font-semibold text-indigo-700 mb-6 flex items-center justify-center gap-2">
-            <BarChart3 className="w-6 h-6 text-indigo-500" /> National Fraud Statistics
+        <div className="bg-gradient-to-br from-white to-blue-50 rounded-3xl shadow-xl p-8 border border-blue-100">
+          <h2 className="text-3xl font-bold text-center mb-8">
+            <span className="bg-gradient-to-r from-orange-600 to-green-600 bg-clip-text text-transparent">
+              भारतीय साइबर अपराध आंकड़े
+            </span>
+            <br />
+            <span className="text-xl text-slate-700 mt-2 block">Indian Cyber Crime Statistics</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-indigo-50 p-6 rounded-xl text-center">
-              <p className="text-4xl font-bold text-indigo-700">$8.8B</p>
-              <p className="text-slate-700 mt-2">Lost to fraud in 2022 nationwide</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-orange-100 to-orange-200 p-8 rounded-2xl text-center transform hover:scale-105 transition-transform duration-300 shadow-lg">
+              <TrendingUp className="w-8 h-8 text-orange-600 mx-auto mb-4" />
+              <p className="text-5xl font-bold text-orange-700 mb-2">₹1.25L Cr</p>
+              <p className="text-slate-700 font-medium">साइबर अपराध से नुकसान</p>
+              <p className="text-sm text-slate-600 mt-1">Cyber crime losses in India (2023)</p>
             </div>
-            <div className="bg-amber-50 p-6 rounded-xl text-center">
-              <p className="text-4xl font-bold text-amber-700">2.4M</p>
-              <p className="text-slate-700 mt-2">Fraud reports filed by consumers</p>
+            <div className="bg-gradient-to-br from-blue-100 to-blue-200 p-8 rounded-2xl text-center transform hover:scale-105 transition-transform duration-300 shadow-lg">
+              <AlertTriangle className="w-8 h-8 text-blue-600 mx-auto mb-4" />
+              <p className="text-5xl font-bold text-blue-700 mb-2">15.6L</p>
+              <p className="text-slate-700 font-medium">साइबर अपराध की शिकायतें</p>
+              <p className="text-sm text-slate-600 mt-1">Cyber crime complaints registered</p>
             </div>
-            <div className="bg-rose-50 p-6 rounded-xl text-center">
-              <p className="text-4xl font-bold text-rose-700">46%</p>
-              <p className="text-slate-700 mt-2">Increase in account takeover attempts</p>
+            <div className="bg-gradient-to-br from-green-100 to-green-200 p-8 rounded-2xl text-center transform hover:scale-105 transition-transform duration-300 shadow-lg">
+              <Shield className="w-8 h-8 text-green-600 mx-auto mb-4" />
+              <p className="text-5xl font-bold text-green-700 mb-2">78%</p>
+              <p className="text-slate-700 font-medium">बैंकिंग धोखाधड़ी वृद्धि</p>
+              <p className="text-sm text-slate-600 mt-1">Increase in banking fraud cases</p>
             </div>
           </div>
-          <p className="text-sm text-slate-500 text-center mt-4">
-            Source: Federal Trade Commission Consumer Sentinel Network
-          </p>
+          <div className="mt-8 bg-gradient-to-r from-slate-100 to-slate-200 p-4 rounded-xl">
+            <p className="text-sm text-slate-600 text-center font-medium">
+              स्रोत: भारतीय साइबर अपराध समन्वय केंद्र (I4C) | Source: Indian Cyber Crime Coordination Centre
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Why It Happens */}
       <section className="max-w-6xl mx-auto grid gap-8 md:grid-cols-2 mb-16">
         <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8">
-          <h2 className="text-2xl font-semibold text-indigo-700 mb-4 flex items-center gap-2">
-            <AlertTriangle className="w-6 h-6 text-indigo-500" /> Why Does Account Fraud Happen?
+          <h2 className="text-2xl font-semibold text-orange-700 mb-4 flex items-center gap-2">
+            <AlertTriangle className="w-6 h-6 text-orange-500" /> भारत में खाता धोखाधड़ी क्यों होती है?
           </h2>
+          <h3 className="text-lg font-medium text-slate-600 mb-4">Why Does Account Fraud Happen in India?</h3>
           <p className="text-slate-700 leading-relaxed mb-4">
-            Fraudsters exploit weak identity verification, poor security controls, and stolen data to commit fraud. Major reasons include:
+            धोखेबाज कमजोर पहचान सत्यापन, खराब सुरक्षा नियंत्रण और चोरी हुए डेटा का दुरुपयोग करके धोखाधड़ी करते हैं। मुख्य कारण हैं:
           </p>
           <ul className="list-disc pl-6 space-y-2 text-slate-700">
-            <li>Easy access to leaked or stolen personal information through data breaches</li>
-            <li>Weak customer verification at sign-up (no proper KYC procedures)</li>
-            <li>Use of sophisticated bots to mass-create fake accounts</li>
-            <li>Exploitation of referral bonuses, free trials, and promotional offers</li>
-            <li>Poor monitoring of unusual account activity and transactions</li>
-            <li>Increased digitalization during and after the pandemic</li>
-            <li>Lack of consumer awareness about security best practices</li>
+            <li>डेटा उल्लंघन के माध्यम से व्यक्तिगत जानकारी तक आसान पहुंच</li>
+            <li>साइन-अप के समय कमजोर ग्राहक सत्यापन (उचित KYC प्रक्रिया नहीं)</li>
+            <li>नकली खाते बनाने के लिए परिष्कृत बॉट्स का उपयोग</li>
+            <li>रेफरल बोनस, मुफ्त ट्रायल और प्रचार ऑफर का दुरुपयोग</li>
+            <li>असामान्य खाता गतिविधि और लेनदेन की खराब निगरानी</li>
+            <li>महामारी के दौरान और बाद में बढ़ा हुआ डिजिटलीकरण</li>
+            <li>सुरक्षा सर्वोत्तम प्रथाओं के बारे में उपभोक्ता जागरूकता की कमी</li>
           </ul>
         </div>
 
         {/* Types of Account Fraud */}
         <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8">
-          <h2 className="text-2xl font-semibold text-indigo-700 mb-4 flex items-center gap-2">
-            <Bot className="w-6 h-6 text-indigo-500" /> Common Types of Account Fraud
+          <h2 className="text-2xl font-semibold text-orange-700 mb-4 flex items-center gap-2">
+            <Bot className="w-6 h-6 text-orange-500" /> खाता धोखाधड़ी के प्रकार
           </h2>
-          <ul className="space-y-4 text-slate-700">
-            <li>
-              <b>New Account Fraud:</b> Fake accounts created using stolen or false details to gain benefits or perform scams.
-            </li>
-            <li>
-              <b>Account Takeover (ATO):</b> When fraudsters steal credentials to hijack a genuine user's account.
-            </li>
-            <li>
-              <b>Synthetic Identity Fraud:</b> Mixing real and fake information to create a "new" identity that can bypass verification.
-            </li>
-            <li>
-              <b>Mule Accounts:</b> Accounts used as channels for money laundering or illegal transfers, often without the account holder's knowledge.
-            </li>
-            <li>
-              <b>Payment Fraud:</b> Unauthorized transactions using compromised payment information.
-            </li>
-            <li>
-              <b>Loan Stacking:</b> Applying for multiple loans simultaneously using falsified information.
-            </li>
-          </ul>
+          <h3 className="text-lg font-medium text-slate-600 mb-4">Common Types of Account Fraud</h3>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div className="bg-gradient-to-br from-red-50 to-red-100 p-4 rounded-xl border-l-4 border-red-400">
+              <h4 className="font-bold text-red-700 mb-2">नया खाता धोखाधड़ी (New Account Fraud)</h4>
+              <p className="text-sm text-slate-700">चोरी या झूठे विवरण का उपयोग करके बनाए गए नकली खाते</p>
+            </div>
+            <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-4 rounded-xl border-l-4 border-orange-400">
+              <h4 className="font-bold text-orange-700 mb-2">खाता अधिग्रहण (Account Takeover)</h4>
+              <p className="text-sm text-slate-700">जब धोखेबाज वास्तविक उपयोगकर्ता के खाते को हाइजैक करते हैं</p>
+            </div>
+            <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 p-4 rounded-xl border-l-4 border-yellow-400">
+              <h4 className="font-bold text-yellow-700 mb-2">सिंथेटिक पहचान धोखाधड़ी</h4>
+              <p className="text-sm text-slate-700">वास्तविक और नकली जानकारी मिलाकर नई पहचान बनाना</p>
+            </div>
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-4 rounded-xl border-l-4 border-purple-400">
+              <h4 className="font-bold text-purple-700 mb-2">मनी म्यूल खाते (Mule Accounts)</h4>
+              <p className="text-sm text-slate-700">मनी लॉन्ड्रिंग के लिए इस्तेमाल होने वाले खाते</p>
+            </div>
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-xl border-l-4 border-blue-400">
+              <h4 className="font-bold text-blue-700 mb-2">भुगतान धोखाधड़ी (Payment Fraud)</h4>
+              <p className="text-sm text-slate-700">समझौता किए गए भुगतान जानकारी का उपयोग</p>
+            </div>
+            <div className="bg-gradient-to-br from-green-50 to-green-100 p-4 rounded-xl border-l-4 border-green-400">
+              <h4 className="font-bold text-green-700 mb-2">लोन स्टैकिंग (Loan Stacking)</h4>
+              <p className="text-sm text-slate-700">झूठी जानकारी के साथ एकसाथ कई लोन के लिए आवेदन</p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Warning Signs + Impact */}
       <section className="max-w-6xl mx-auto grid gap-8 md:grid-cols-2 mb-16">
         {/* Warning Signs */}
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8">
-          <h2 className="text-2xl font-semibold text-indigo-700 mb-4 flex items-center gap-2">
-            <Eye className="w-6 h-6 text-indigo-500" /> Warning Signs of Account Fraud
+        <div className="bg-gradient-to-br from-white to-red-50 rounded-2xl shadow-xl p-8 border border-red-100">
+          <h2 className="text-2xl font-semibold text-red-700 mb-4 flex items-center gap-2">
+            <Eye className="w-6 h-6 text-red-500" /> चेतावनी संकेत | Warning Signs
           </h2>
-          <p className="text-slate-700 mb-3">
-            Organizations and individuals should monitor these red flags:
+          <p className="text-slate-700 mb-3 font-medium">
+            संगठनों और व्यक्तियों को इन खतरे के संकेतों पर नजर रखनी चाहिए:
           </p>
           <ul className="list-disc pl-6 space-y-2 text-slate-700">
-            <li>Multiple accounts from the same IP address or device</li>
-            <li>High-volume transactions immediately after account sign-up</li>
-            <li>Frequent password reset attempts or failed login attempts</li>
-            <li>Accounts that remain inactive until suddenly used for suspicious activity</li>
-            <li>Suspicious logins from unusual locations or countries</li>
-            <li>Mismatch between account information and user behavior patterns</li>
-            <li>Use of disposable email addresses or virtual phone numbers</li>
-            <li>Unusual changes to account details (email, phone, address)</li>
+            <li>एक ही IP पता या डिवाइस से कई खाते</li>
+            <li>खाता खोलने के तुरंत बाद बड़ी मात्रा में लेनदेन</li>
+            <li>बार-बार पासवर्ड रीसेट या असफल लॉगिन प्रयास</li>
+            <li>निष्क्रिय खाते जो अचानक संदिग्ध गतिविधि के लिए उपयोग होते हैं</li>
+            <li>असामान्य स्थानों या देशों से संदिग्ध लॉगिन</li>
+            <li>खाता जानकारी और उपयोगकर्ता व्यवहार पैटर्न में बेमेल</li>
+            <li>डिस्पोजेबल ईमेल पते या वर्चुअल फोन नंबर का उपयोग</li>
+            <li>खाता विवरण में असामान्य परिवर्तन (ईमेल, फोन, पता)</li>
           </ul>
         </div>
 
         {/* Impact */}
-        <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-8">
-          <h2 className="text-2xl font-semibold text-indigo-700 mb-4 flex items-center gap-2">
-            <Users className="w-6 h-6 text-indigo-500" /> Impact of Account Fraud
+        <div className="bg-gradient-to-br from-white to-orange-50 rounded-2xl shadow-xl p-8 border border-orange-100">
+          <h2 className="text-2xl font-semibold text-orange-700 mb-4 flex items-center gap-2">
+            <Users className="w-6 h-6 text-orange-500" /> धोखाधड़ी का प्रभाव | Impact of Fraud
           </h2>
           <ul className="list-disc pl-6 space-y-2 text-slate-700">
             <li>
@@ -151,13 +188,15 @@ function AccountFraud() {
       </section>
 
       {/* Prevention Section */}
-      <section className="max-w-5xl mx-auto mb-16">
-        <div className="bg-gradient-to-r from-indigo-600 to-blue-500 text-white p-10 rounded-2xl shadow-lg">
-          <h2 className="text-3xl font-bold mb-4 flex items-center gap-2">
-            <ShieldAlert className="w-7 h-7" /> How to Prevent Account Fraud
+      <section className="max-w-6xl mx-auto mb-16">
+        <div className="bg-gradient-to-r from-orange-600 via-red-500 to-green-600 text-white p-10 rounded-3xl shadow-2xl border-2 border-white/20">
+          <h2 className="text-4xl font-bold mb-4 flex items-center justify-center gap-3">
+            <ShieldAlert className="w-10 h-10" /> 
+            <span>धोखाधड़ी से कैसे बचें</span>
           </h2>
-          <p className="text-blue-100 mb-5">
-            Preventing account fraud requires strong security controls, intelligent monitoring, and user education. Key strategies include:
+          <h3 className="text-2xl font-semibold text-center mb-6 text-orange-100">How to Prevent Account Fraud</h3>
+          <p className="text-white/90 mb-8 text-center text-lg leading-relaxed max-w-4xl mx-auto">
+            खाता धोखाधड़ी को रोकने के लिए मजबूत सुरक्षा नियंत्रण, बुद्धिमान निगरानी और उपयोगकर्ता शिक्षा की आवश्यकता होती है। मुख्य रणनीतियां:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <ul className="list-disc pl-6 space-y-2">
@@ -186,25 +225,32 @@ function AccountFraud() {
             className="w-full p-6 text-left flex justify-between items-center"
             onClick={() => toggleSection('reporting')}
           >
-            <span className="text-xl font-semibold text-indigo-700">How to Report Suspected Fraud</span>
+            <span className="text-xl font-semibold text-red-700">संदिग्ध धोखाधड़ी की रिपोर्ट कैसे करें | How to Report Fraud</span>
             {openSection === 'reporting' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
           </button>
           {openSection === 'reporting' && (
             <div className="px-6 pb-6">
-              <p className="text-slate-700 mb-4">If you suspect you've been a victim of account fraud:</p>
-              <ol className="list-decimal pl-6 space-y-2 text-slate-700">
-                <li>Immediately contact your financial institution</li>
-                <li>File a report with your local law enforcement agency</li>
-                <li>Report to the Federal Trade Commission at ReportFraud.ftc.gov</li>
-                <li>Contact the three major credit bureaus to place a fraud alert
-                  <ul className="list-disc pl-6 mt-2">
-                    <li>Equifax: 1-800-525-6285</li>
-                    <li>Experian: 1-888-397-3742</li>
-                    <li>TransUnion: 1-800-680-7289</li>
+              <p className="text-slate-700 mb-4 font-medium">यदि आपको लगता है कि आप खाता धोखाधड़ी के शिकार हैं:</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-red-50 p-4 rounded-xl">
+                  <h4 className="font-bold text-red-700 mb-3 flex items-center gap-2">
+                    <Phone className="w-4 h-4" /> तत्काल संपर्क करें
+                  </h4>
+                  <ul className="text-sm text-slate-700 space-y-2">
+                    <li>• अपने बैंक से तुरंत संपर्क करें</li>
+                    <li>• साइबर क्राइम हेल्पलाइन: 1930</li>
+                    <li>• स्थानीय पुलिस में रिपोर्ट दर्ज करें</li>
                   </ul>
-                </li>
-                <li>Report to the Internet Crime Complaint Center (IC3) if online</li>
-              </ol>
+                </div>
+                <div className="bg-blue-50 p-4 rounded-xl">
+                  <h4 className="font-bold text-blue-700 mb-3">ऑनलाइन रिपोर्ट करें</h4>
+                  <ul className="text-sm text-slate-700 space-y-2">
+                    <li>• cybercrime.gov.in पर शिकायत दर्ज करें</li>
+                    <li>• RBI की वेबसाइट पर रिपोर्ट करें</li>
+                    <li>• I4C (Indian Cyber Crime Coordination Centre) को सूचित करें</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           )}
         </div>
@@ -241,20 +287,30 @@ function AccountFraud() {
             className="w-full p-6 text-left flex justify-between items-center"
             onClick={() => toggleSection('legislation')}
           >
-            <span className="text-xl font-semibold text-indigo-700">National Initiatives & Legislation</span>
+            <span className="text-xl font-semibold text-green-700">भारतीय पहल और कानून | Indian Initiatives & Laws</span>
             {openSection === 'legislation' ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
           </button>
           {openSection === 'legislation' && (
             <div className="px-6 pb-6">
-              <p className="text-slate-700 mb-4">Key national efforts to combat account fraud:</p>
-              <ul className="list-disc pl-6 space-y-2 text-slate-700">
-                <li><b>Identity Theft and Assumption Deterrence Act:</b> Makes identity theft a federal crime</li>
-                <li><b>FACT Act:</b> Allows consumers to place fraud alerts and freezes on credit files</li>
-                <li><b>FFIEC Guidance:</b> Sets authentication standards for online banking</li>
-                <li><b>National Strategy to Combat Identity Theft:</b> Coordinated government approach</li>
-                <li><b>FTC's IdentityTheft.gov:</b> Centralized resource for identity theft victims</li>
-                <li><b>Financial Services Information Sharing and Analysis Center (FS-ISAC):</b> Industry collaboration</li>
-              </ul>
+              <p className="text-slate-700 mb-4 font-medium">खाता धोखाधड़ी से निपटने के लिए प्रमुख राष्ट्रीय प्रयास:</p>
+              <div className="grid grid-cols-1 gap-4">
+                <div className="bg-gradient-to-r from-orange-50 to-orange-100 p-4 rounded-xl border-l-4 border-orange-400">
+                  <h4 className="font-bold text-orange-700 mb-2">IT Act 2000 & Amendments</h4>
+                  <p className="text-sm text-slate-700">साइबर अपराधों के लिए कानूनी ढांचा और दंड का प्रावधान</p>
+                </div>
+                <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-4 rounded-xl border-l-4 border-blue-400">
+                  <h4 className="font-bold text-blue-700 mb-2">RBI Guidelines on Digital Payments</h4>
+                  <p className="text-sm text-slate-700">डिजिटल भुगतान सुरक्षा के लिए आरबीआई दिशानिर्देश</p>
+                </div>
+                <div className="bg-gradient-to-r from-green-50 to-green-100 p-4 rounded-xl border-l-4 border-green-400">
+                  <h4 className="font-bold text-green-700 mb-2">National Cyber Security Strategy 2020</h4>
+                  <p className="text-sm text-slate-700">साइबर सुरक्षा के लिए राष्ट्रीय रणनीति और नीति</p>
+                </div>
+                <div className="bg-gradient-to-r from-purple-50 to-purple-100 p-4 rounded-xl border-l-4 border-purple-400">
+                  <h4 className="font-bold text-purple-700 mb-2">CERT-In (Indian Computer Emergency Response Team)</h4>
+                  <p className="text-sm text-slate-700">साइबर सुरक्षा घटनाओं के लिए राष्ट्रीय नोडल एजेंसी</p>
+                </div>
+              </div>
             </div>
           )}
         </div>

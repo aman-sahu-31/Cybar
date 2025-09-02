@@ -1,4 +1,20 @@
 import React, { useState } from "react";
+import {
+  Shield,
+  Eye,
+  Users,
+  Lock,
+  TrendingUp,
+  CheckCircle,
+  AlertTriangle,
+  Globe,
+  Phone,
+  Mail,
+  Activity,
+  BarChart3,
+  Zap,
+  Bot
+} from "lucide-react";
 
 export default function FraudPrevention() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -9,64 +25,92 @@ export default function FraudPrevention() {
 
   const topAccordions = [
     {
-      title: "Unite Operational Silos",
+      title: "परिचालन साइलो को एकजुट करें",
+      subtitle: "Unite Operational Silos",
+      icon: <Users className="w-5 h-5" />,
       content:
-        "Darwinium creates a single view of the customer that can be used by multiple business units. At the network level, security teams can make more context-aware risk decisions. Fraud teams gain deeper visibility into user intent across each digital interaction. CRM and marketing teams can use behavioral insights to tailor experiences on a per customer basis to build loyalty and trust.",
+        "हमारा सिस्टम ग्राहक का एक एकीकृत दृश्य बनाता है जिसका उपयोग कई व्यावसायिक इकाइयों द्वारा किया जा सकता है। नेटवर्क स्तर पर, सुरक्षा टीमें अधिक संदर्भ-जागरूक जोखिम निर्णय ले सकती हैं। धोखाधड़ी टीमों को प्रत्येक डिजिटल इंटरैक्शन में उपयोगकर्ता के इरादे की गहरी दृश्यता मिलती है।",
     },
     {
-      title: "Customer Journey Orchestration",
+      title: "ग्राहक यात्रा व्यवस्थापन",
+      subtitle: "Customer Journey Orchestration",
+      icon: <Activity className="w-5 h-5" />,
       content:
-        "Streamline orchestration of user journeys across multiple systems. Gain better visibility and control of customer interactions without compromising trust.",
+        "कई सिस्टम में उपयोगकर्ता यात्राओं के व्यवस्थापन को सुव्यवस्थित करें। विश्वास से समझौता किए बिना ग्राहक इंटरैक्शन की बेहतर दृश्यता और नियंत्रण प्राप्त करें।",
     },
     {
-      title: "Future-proofed, Resilient Risk Management",
+      title: "भविष्य-प्रूफ, लचीला जोखिम प्रबंधन",
+      subtitle: "Future-proofed, Resilient Risk Management",
+      icon: <Shield className="w-5 h-5" />,
       content:
-        "Build a risk management strategy that adapts to evolving fraud threats while minimizing friction for legitimate users.",
+        "एक जोखिम प्रबंधन रणनीति बनाएं जो वैध उपयोगकर्ताओं के लिए घर्षण को कम करते हुए विकसित धोखाधड़ी खतरों के अनुकूल हो।",
     },
   ];
 
   const bottomAccordions = [
     {
-      title: "Frictionless Account Opening & Onboarding",
+      title: "निर्बाध खाता खोलना और ऑनबोर्डिंग",
+      subtitle: "Frictionless Account Opening & Onboarding",
+      icon: <CheckCircle className="w-5 h-5" />,
       content:
-        "Harness browsing behaviors prior to new account application to detect high-risk / anomalous behaviors. Identify and block account creations from bots or fraud farms to ensure streamlined onboarding for legitimate customers. Integrate additional intelligence from plug-and-play third-party services, or any bespoke services via the API.",
+        "नए खाता आवेदन से पहले ब्राउज़िंग व्यवहार का उपयोग करके उच्च जोखिम/असामान्य व्यवहार का पता लगाएं। बॉट या धोखाधड़ी फार्म से खाता निर्माण की पहचान और ब्लॉक करें। वैध ग्राहकों के लिए सुव्यवस्थित ऑनबोर्डिंग सुनिश्चित करें।",
     },
     {
-      title: "Stop ATOs and Credential Stuffing",
+      title: "ATO और क्रेडेंशियल स्टफिंग रोकें",
+      subtitle: "Stop ATOs and Credential Stuffing",
+      icon: <Lock className="w-5 h-5" />,
       content:
-        "Prevent account takeover attempts and credential stuffing attacks with behavioral analysis and anomaly detection.",
+        "व्यवहारिक विश्लेषण और विसंगति का पता लगाने के साथ खाता अधिग्रहण के प्रयासों और क्रेडेंशियल स्टफिंग हमलों को रोकें।",
     },
     {
-      title: "Detect & Deter Social Engineering",
+      title: "सामाजिक इंजीनियरिंग का पता लगाएं",
+      subtitle: "Detect & Deter Social Engineering",
+      icon: <AlertTriangle className="w-5 h-5" />,
       content:
-        "Identify social engineering patterns in real-time to protect customers from fraudulent manipulation.",
+        "ग्राहकों को धोखाधड़ी से बचाने के लिए वास्तविक समय में सामाजिक इंजीनियरिंग पैटर्न की पहचान करें।",
     },
     {
-      title: "Flexible, Edge-Based Architecture",
+      title: "लचीला, एज-आधारित आर्किटेक्चर",
+      subtitle: "Flexible, Edge-Based Architecture",
+      icon: <Globe className="w-5 h-5" />,
       content:
-        "Deploy fraud detection closer to your users for faster, more reliable protection without adding unnecessary latency.",
+        "अनावश्यक विलंबता जोड़े बिना तेज़, अधिक विश्वसनीय सुरक्षा के लिए अपने उपयोगकर्ताओं के करीब धोखाधड़ी का पता लगाने की तैनाती करें।",
     },
   ];
 
   return (
-    <div className="bg-gray-200 pb-10 text-slate-800 min-h-screen">
+    <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen">
+      {/* Government Badges */}
+      <div className="flex justify-center gap-4 pt-6 mb-8">
+        <div className="bg-gradient-to-r from-orange-500 via-white to-green-500 px-4 py-2 rounded-full shadow-lg">
+          <span className="text-sm font-bold text-gray-800">🇮🇳 Digital India</span>
+        </div>
+        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-2 rounded-full shadow-lg">
+          <span className="text-sm font-bold text-white">🛡️ Cyber Suraksha</span>
+        </div>
+      </div>
+
       {/* ---------------- TOP HEADING ---------------- */}
       <div className="py-6 px-6 max-w-6xl mx-auto text-center mb-8">
         <div className="mb-5">
-          <span className="inline-block bg-blue-100 text-blue-700 px-6 py-3 rounded-full text-sm font-semibold">
-            Intelligence & Analytics
+          <span className="inline-block bg-gradient-to-r from-orange-100 to-green-100 text-orange-700 px-6 py-3 rounded-full text-sm font-semibold border border-orange-200">
+            बुद्धिमत्ता और विश्लेषण / Intelligence & Analytics
           </span>
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900">
-          Unify Intelligence and Analytics to Better Protect the Complete
-          Customer Journey
+        <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-orange-600 to-green-600 bg-clip-text text-transparent">
+          संपूर्ण ग्राहक यात्रा की बेहतर सुरक्षा के लिए
         </h2>
-        <p className="text-slate-600 text-md max-w-4xl mx-auto leading-relaxed">
-          Digital wallets, cryptocurrencies and neo-banks are key targets for
-          fraudsters looking to exploit gaps in business processes, putting
-          digital-first strategies to the test. Darwinium unites operational
-          siloes and gaps in digital journeys to future-proof cyberfraud
-          prevention.
+        <h3 className="text-2xl md:text-3xl font-semibold mb-6 text-gray-700">
+          बुद्धिमत्ता और विश्लेषण को एकजुट करें
+        </h3>
+        <h4 className="text-xl font-medium mb-6 text-gray-600">
+          Unify Intelligence and Analytics to Better Protect the Complete Customer Journey
+        </h4>
+        <p className="text-gray-700 text-md max-w-4xl mx-auto leading-relaxed mb-4">
+          डिजिटल वॉलेट, क्रिप्टोकरेंसी और नव-बैंक धोखाधड़ी करने वालों के मुख्य लक्ष्य हैं जो व्यावसायिक प्रक्रियाओं में अंतराल का फायदा उठाना चाहते हैं। हमारा सिस्टम साइबर धोखाधड़ी रोकथाम को भविष्य-प्रूफ बनाने के लिए परिचालन साइलो और डिजिटल यात्राओं में अंतराल को एकजुट करता है।
+        </p>
+        <p className="text-gray-600 text-sm max-w-3xl mx-auto leading-relaxed italic">
+          Digital wallets, cryptocurrencies and neo-banks are key targets for fraudsters. Our system unites operational silos and gaps in digital journeys to future-proof cyberfraud prevention.
         </p>
       </div>
 
@@ -77,17 +121,27 @@ export default function FraudPrevention() {
           {topAccordions.map((item, index) => (
             <div
               key={index}
-              className="bg-white border border-slate-200 rounded-xl p-6 cursor-pointer hover:shadow-lg transition-shadow duration-300"
+              className="bg-gradient-to-br from-white to-blue-50 border border-blue-200 rounded-2xl p-6 cursor-pointer hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               onClick={() => toggleAccordion(index)}
             >
               <div className="flex justify-between items-center">
-                <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                <div className="flex items-center gap-3">
+                  <div className="bg-gradient-to-r from-orange-500 to-green-500 p-2 rounded-lg text-white">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-800">{item.title}</h3>
+                    <p className="text-sm text-gray-600 font-medium">{item.subtitle}</p>
+                  </div>
+                </div>
+                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
                   {openIndex === index ? "−" : "+"}
                 </div>
               </div>
               {openIndex === index && (
-                <p className="text-slate-600 mt-4 text-base leading-relaxed">{item.content}</p>
+                <div className="mt-4 p-4 bg-gradient-to-r from-orange-50 to-green-50 rounded-xl border border-orange-200">
+                  <p className="text-gray-700 text-base leading-relaxed">{item.content}</p>
+                </div>
               )}
             </div>
           ))}
@@ -95,59 +149,170 @@ export default function FraudPrevention() {
 
         {/* Right Image */}
         <div className="flex justify-center">
-          <img
-            src="https://www.darwinium.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fbjdg9lcf%2Fstaging%2F391b8d211ea12936ef8f78f24346eb99d848159c-1175x982.jpg%3Ffit%3Dmax%26auto%3Dformat&w=1920&q=75"
-            alt="Analytics demo"
-            className="rounded-2xl shadow-lg border border-slate-200"
-          />
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-green-400 rounded-2xl blur-lg opacity-30"></div>
+            <div className="relative bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow-xl border border-blue-200 p-8">
+              <div className="text-center">
+                <div className="bg-gradient-to-r from-orange-500 to-green-500 p-4 rounded-full w-fit mx-auto mb-6">
+                  <BarChart3 className="text-white w-12 h-12" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                  भारतीय साइबर सुरक्षा डैशबोर्ड
+                </h3>
+                <p className="text-gray-600 mb-6">Indian Cyber Security Dashboard</p>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-3 rounded-lg">
+                    <div className="font-bold text-green-700">99.7%</div>
+                    <div className="text-gray-600">सुरक्षा दर</div>
+                  </div>
+                  <div className="bg-gradient-to-r from-blue-100 to-cyan-100 p-3 rounded-lg">
+                    <div className="font-bold text-blue-700">24/7</div>
+                    <div className="text-gray-600">निगरानी</div>
+                  </div>
+                  <div className="bg-gradient-to-r from-orange-100 to-red-100 p-3 rounded-lg">
+                    <div className="font-bold text-orange-700">1930</div>
+                    <div className="text-gray-600">हेल्पलाइन</div>
+                  </div>
+                  <div className="bg-gradient-to-r from-purple-100 to-violet-100 p-3 rounded-lg">
+                    <div className="font-bold text-purple-700">AI</div>
+                    <div className="text-gray-600">संचालित</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* ---------------- BOTTOM SECTION ---------------- */}
       <div className="max-w-6xl mx-auto mt-24 grid grid-cols-1 md:grid-cols-2 gap-12 px-6">
         {/* Left Text */}
-        <div className="bg-white border border-slate-200 rounded-2xl p-8">
-          <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center mb-6">
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
+        <div className="bg-gradient-to-br from-white to-orange-50 border border-orange-200 rounded-2xl p-8 shadow-lg">
+          <div className="w-12 h-12 bg-gradient-to-r from-orange-600 to-green-600 rounded-xl flex items-center justify-center mb-6">
+            <CheckCircle className="w-6 h-6 text-white" />
           </div>
-          <h2 className="text-3xl font-bold mb-6 text-slate-900">
-            Fintech Fraud Prevention Powered by Behavioral Intelligence
+          <h2 className="text-3xl font-bold mb-2 text-gray-800">
+            व्यवहारिक बुद्धिमत्ता द्वारा संचालित
           </h2>
-          <p className="text-slate-600 text-lg leading-relaxed">
-            Darwinium's edge-based architecture helps fintechs see the full
-            context of user behavior, identifying coercion, compromised
-            accounts, and fraudulent AI agents in real-time, empowering
-            businesses to act instantly without compromising customer
-            experience.
+          <h3 className="text-xl font-semibold mb-6 text-gray-700">
+            फिनटेक धोखाधड़ी रोकथाम
+          </h3>
+          <p className="text-gray-600 text-sm mb-4 italic">
+            Fintech Fraud Prevention Powered by Behavioral Intelligence
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed">
+            हमारा एज-आधारित आर्किटेक्चर फिनटेक को उपयोगकर्ता व्यवहार का पूरा संदर्भ देखने में मदद करता है, वास्तविक समय में जबरदस्ती, समझौता किए गए खातों और धोखाधड़ी AI एजेंटों की पहचान करता है।
           </p>
         </div>
 
         {/* Right Accordions */}
-        <div className="space-y-6   ">
+        <div className="space-y-6">
           {bottomAccordions.map((item, index) => (
             <div
               key={index + 10}
-              className="bg-white border  border-slate-200 rounded-xl p-6 cursor-pointer hover:shadow-lg transition-shadow duration-300"
+              className="bg-gradient-to-br from-white to-green-50 border border-green-200 rounded-2xl p-6 cursor-pointer hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
               onClick={() => toggleAccordion(index + 10)}
             >
               <div className="flex justify-between items-center">
-                <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">
+                <div className="flex items-center gap-3">
+                  <div className="bg-gradient-to-r from-blue-500 to-indigo-500 p-2 rounded-lg text-white">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-800">{item.title}</h3>
+                    <p className="text-sm text-gray-600 font-medium">{item.subtitle}</p>
+                  </div>
+                </div>
+                <div className="w-8 h-8 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold shadow-lg">
                   {openIndex === index + 10 ? "−" : "+"}
                 </div>
               </div>
               {openIndex === index + 10 && (
-                <p className="text-slate-600 mt-4 text-base leading-relaxed">{item.content}</p>
+                <div className="mt-4 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200">
+                  <p className="text-gray-700 text-base leading-relaxed">{item.content}</p>
+                </div>
               )}
             </div>
           ))}
         </div>
       </div>
 
-      {/* ---------------- TESTIMONIAL SECTION ---------------- */}
-     
+      {/* ---------------- GOVERNMENT RESOURCES SECTION ---------------- */}
+      <div className="max-w-6xl mx-auto mt-24 px-6">
+        <div className="bg-gradient-to-r from-orange-600 via-white to-green-600 rounded-2xl shadow-xl p-10">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-800 mb-2">
+              सरकारी संसाधन और सहायता
+            </h2>
+            <p className="text-xl font-semibold text-gray-700 mb-4">
+              Government Resources and Support
+            </p>
+            <p className="text-gray-600">भारतीय साइबर सुरक्षा और धोखाधड़ी रोकथाम</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-red-200">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-gradient-to-r from-red-500 to-orange-500 p-3 rounded-lg">
+                  <Phone className="text-white w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-800">साइबर हेल्पलाइन</h4>
+                  <p className="text-gray-600 text-sm">Cyber Helpline</p>
+                </div>
+              </div>
+              <p className="text-gray-700 mb-2">
+                <strong className="text-red-600">1930</strong> - तत्काल सहायता
+              </p>
+              <p className="text-gray-600 text-sm">Immediate assistance available</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-blue-200">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-gradient-to-r from-blue-500 to-indigo-500 p-3 rounded-lg">
+                  <Mail className="text-white w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-800">CERT-In पोर्टल</h4>
+                  <p className="text-gray-600 text-sm">CERT-In Portal</p>
+                </div>
+              </div>
+              <p className="text-gray-700 mb-2">
+                <strong className="text-blue-600">cert-in.org.in</strong>
+              </p>
+              <p className="text-gray-600 text-sm">Official cyber security portal</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-green-200">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-gradient-to-r from-green-500 to-emerald-500 p-3 rounded-lg">
+                  <Globe className="text-white w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-800">MeitY साइबर सुरक्षा</h4>
+                  <p className="text-gray-600 text-sm">MeitY Cyber Security</p>
+                </div>
+              </div>
+              <p className="text-gray-700 mb-2">
+                <strong className="text-green-600">meity.gov.in</strong>
+              </p>
+              <p className="text-gray-600 text-sm">Ministry portal for cyber safety</p>
+            </div>
+          </div>
+
+          <div className="text-center mt-8">
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                तत्काल रिपोर्ट करें / Report Now
+              </button>
+              <button className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                और जानें / Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 }

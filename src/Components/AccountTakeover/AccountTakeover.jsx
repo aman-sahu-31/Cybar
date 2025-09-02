@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Shield, AlertTriangle, Lock, Key, UserCheck, Phone, Mail, ChevronDown, ChevronUp, BarChart, Clock, Globe, CreditCard } from "lucide-react";
+import { Shield, AlertTriangle, Lock, Key, UserCheck, Phone, Mail, ChevronDown, ChevronUp, BarChart, Clock, Globe, CreditCard, TrendingUp } from "lucide-react";
 
 function AccountTakeover() {
   const [openSection, setOpenSection] = useState(null);
@@ -18,62 +18,94 @@ function AccountTakeover() {
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            Account Takeover (ATO) Protection
-          </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Account Takeover occurs when cybercriminals gain unauthorized access to your accounts. 
-            Learn how to protect yourself and respond if you become a victim.
-          </p>
-        </div>
-
-        {/* Stats Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-6 mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center justify-center gap-2">
-            <BarChart className="w-6 h-6 text-indigo-600" />
-            ATO By The Numbers
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-blue-50 p-6 rounded-xl text-center">
-              <p className="text-3xl font-bold text-blue-700">+90%</p>
-              <p className="text-gray-700 mt-2">Increase in ATO attacks in the past year</p>
-            </div>
-            <div className="bg-red-50 p-6 rounded-xl text-center">
-              <p className="text-3xl font-bold text-red-700">$12K</p>
-              <p className="text-gray-700 mt-2">Average loss per ATO incident</p>
-            </div>
-            <div className="bg-amber-50 p-6 rounded-xl text-center">
-              <p className="text-3xl font-bold text-amber-700">58%</p>
-              <p className="text-gray-700 mt-2">Of people reuse passwords across accounts</p>
+          <div className="bg-gradient-to-r from-orange-500 via-white to-green-500 p-1 rounded-3xl mb-8">
+            <div className="bg-white rounded-3xl p-8">
+              <div className="flex items-center py-5 justify-center mb-4">
+                <Shield className="w-12 h-12 text-orange-500 mr-4" />
+                <h1 className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r py-2 from-orange-600 to-green-600 bg-clip-text text-transparent">
+                  संदिग्ध खाता अधिग्रहण सुरक्षा
+                </h1>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-700 mb-4">
+                Suspicious Account Takeover Detection & Protection
+              </h2>
+              <p className="text-lg text-slate-600 leading-relaxed max-w-4xl mx-auto">
+                संदिग्ध खाता अधिग्रहण एक गंभीर साइबर अपराध है जहां अपराधी आपके वित्तीय खातों तक अनधिकृत पहुंच प्राप्त करते हैं। 
+                हमारी उन्नत निष्क्रियता प्रणाली संदिग्ध लेनदेन की पहचान करती है और आपकी सुरक्षा सुनिश्चित करती है।
+              </p>
+              <div className="mt-6 flex items-center justify-center space-x-4">
+                <div className="bg-orange-100 px-4 py-2 rounded-full">
+                  <span className="text-orange-700 font-semibold text-sm">🔒 Cyber Suraksha</span>
+                </div>
+                <div className="bg-green-100 px-4 py-2 rounded-full">
+                  <span className="text-green-700 font-semibold text-sm">🇮🇳 Digital India</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
+        {/* Stats Section */}
+        <div className="bg-gradient-to-br from-white to-blue-50 rounded-3xl shadow-xl p-8 mb-12 border border-blue-100">
+          <h2 className="text-3xl font-bold text-center mb-8">
+            <span className="bg-gradient-to-r from-orange-600 to-green-600 bg-clip-text text-transparent">
+              भारतीय खाता अधिग्रहण आंकड़े
+            </span>
+            <br />
+            <span className="text-xl text-slate-700 mt-2 block">Indian ATO Statistics</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-red-100 to-red-200 p-8 rounded-2xl text-center transform hover:scale-105 transition-transform duration-300 shadow-lg">
+              <TrendingUp className="w-8 h-8 text-red-600 mx-auto mb-4" />
+              <p className="text-5xl font-bold text-red-700 mb-2">+125%</p>
+              <p className="text-slate-700 font-medium">ATO हमलों में वृद्धि</p>
+              <p className="text-sm text-slate-600 mt-1">Increase in ATO attacks (2023)</p>
+            </div>
+            <div className="bg-gradient-to-br from-orange-100 to-orange-200 p-8 rounded-2xl text-center transform hover:scale-105 transition-transform duration-300 shadow-lg">
+              <CreditCard className="w-8 h-8 text-orange-600 mx-auto mb-4" />
+              <p className="text-5xl font-bold text-orange-700 mb-2">₹8.5L</p>
+              <p className="text-slate-700 font-medium">औसत नुकसान प्रति घटना</p>
+              <p className="text-sm text-slate-600 mt-1">Average loss per ATO incident</p>
+            </div>
+            <div className="bg-gradient-to-br from-blue-100 to-blue-200 p-8 rounded-2xl text-center transform hover:scale-105 transition-transform duration-300 shadow-lg">
+              <Lock className="w-8 h-8 text-blue-600 mx-auto mb-4" />
+              <p className="text-5xl font-bold text-blue-700 mb-2">73%</p>
+              <p className="text-slate-700 font-medium">पासवर्ड पुन: उपयोग</p>
+              <p className="text-sm text-slate-600 mt-1">Of Indians reuse passwords</p>
+            </div>
+          </div>
+          <div className="mt-8 bg-gradient-to-r from-slate-100 to-slate-200 p-4 rounded-xl">
+            <p className="text-sm text-slate-600 text-center font-medium">
+              स्रोत: भारतीय साइबर अपराध समन्वय केंद्र (I4C) | Source: Indian Cyber Crime Coordination Centre
+            </p>
+          </div>
+        </div>
+
         {/* Tabs Navigation */}
-        <div className="flex flex-wrap gap-2 mb-8 justify-center">
+        <div className="flex flex-wrap gap-3 mb-8 justify-center">
           <button
-            className={`px-4 py-2 rounded-lg font-medium ${selectedTab === 'warning-signs' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${selectedTab === 'warning-signs' ? 'bg-gradient-to-r from-red-500 to-red-600 text-white shadow-lg transform scale-105' : 'bg-white text-red-600 border-2 border-red-200 hover:bg-red-50'}`}
             onClick={() => setSelectedTab('warning-signs')}
           >
-            Warning Signs
+            चेतावनी संकेत | Warning Signs
           </button>
           <button
-            className={`px-4 py-2 rounded-lg font-medium ${selectedTab === 'prevention' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${selectedTab === 'prevention' ? 'bg-gradient-to-r from-green-500 to-green-600 text-white shadow-lg transform scale-105' : 'bg-white text-green-600 border-2 border-green-200 hover:bg-green-50'}`}
             onClick={() => setSelectedTab('prevention')}
           >
-            Prevention
+            रोकथाम | Prevention
           </button>
           <button
-            className={`px-4 py-2 rounded-lg font-medium ${selectedTab === 'response' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${selectedTab === 'response' ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg transform scale-105' : 'bg-white text-orange-600 border-2 border-orange-200 hover:bg-orange-50'}`}
             onClick={() => setSelectedTab('response')}
           >
-            Response Plan
+            प्रतिक्रिया योजना | Response Plan
           </button>
           <button
-            className={`px-4 py-2 rounded-lg font-medium ${selectedTab === 'resources' ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+            className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${selectedTab === 'resources' ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg transform scale-105' : 'bg-white text-blue-600 border-2 border-blue-200 hover:bg-blue-50'}`}
             onClick={() => setSelectedTab('resources')}
           >
-            Resources
+            संसाधन | Resources
           </button>
         </div>
 
@@ -81,60 +113,111 @@ function AccountTakeover() {
         <div className="bg-white rounded-2xl shadow-lg p-6 mb-12">
           {selectedTab === 'warning-signs' && (
             <div>
-              <h2 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center gap-2">
-                <AlertTriangle className="w-6 h-6 text-amber-500" />
-                Warning Signs of Account Takeover
+              <h2 className="text-3xl font-bold text-center mb-8">
+                <span className="bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
+                  खाता अधिग्रहण के चेतावनी संकेत
+                </span>
+                <br />
+                <span className="text-xl text-slate-700 mt-2 block">Warning Signs of Account Takeover</span>
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-amber-50 p-5 rounded-xl">
-                  <h3 className="font-semibold text-amber-700 mb-3 flex items-center gap-2">
-                    <Mail className="w-5 h-5" />
-                    Email Indicators
+                <div className="bg-gradient-to-br from-amber-50 to-amber-100 p-6 rounded-2xl shadow-lg border border-amber-200">
+                  <h3 className="font-bold text-amber-700 mb-4 flex items-center gap-2 text-lg">
+                    <Mail className="w-6 h-6" />
+                    ईमेल संकेतक | Email Indicators
                   </h3>
-                  <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                    <li>Password reset emails you didn't request</li>
-                    <li>Notifications of login attempts from unknown devices</li>
-                    <li>Unfamiliar "welcome" emails from services</li>
-                    <li>Confirmation emails for changes you didn't make</li>
+                  <ul className="space-y-3 text-slate-700">
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-600 font-bold">•</span>
+                      <span>पासवर्ड रीसेट ईमेल जो आपने नहीं मांगे</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-600 font-bold">•</span>
+                      <span>अज्ञात डिवाइस से लॉगिन प्रयासों की सूचनाएं</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-600 font-bold">•</span>
+                      <span>अपरिचित सेवाओं से "स्वागत" ईमेल</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-amber-600 font-bold">•</span>
+                      <span>ऐसे बदलावों की पुष्टि ईमेल जो आपने नहीं किए</span>
+                    </li>
                   </ul>
                 </div>
                 
-                <div className="bg-red-50 p-5 rounded-xl">
-                  <h3 className="font-semibold text-red-700 mb-3 flex items-center gap-2">
-                    <CreditCard className="w-5 h-5" />
-                    Financial Indicators
+                <div className="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-2xl shadow-lg border border-red-200">
+                  <h3 className="font-bold text-red-700 mb-4 flex items-center gap-2 text-lg">
+                    <CreditCard className="w-6 h-6" />
+                    वित्तीय संकेतक | Financial Indicators
                   </h3>
-                  <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                    <li>Unauthorized transactions or purchases</li>
-                    <li>Changes to payment methods or billing info</li>
-                    <li>New accounts or lines of credit you didn't open</li>
-                    <li>Unfamiliar recipients in your payment history</li>
+                  <ul className="space-y-3 text-slate-700">
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-600 font-bold">•</span>
+                      <span>अनधिकृत लेनदेन या खरीदारी</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-600 font-bold">•</span>
+                      <span>भुगतान विधियों या बिलिंग जानकारी में बदलाव</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-600 font-bold">•</span>
+                      <span>नए खाते या क्रेडिट लाइन जो आपने नहीं खोले</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-red-600 font-bold">•</span>
+                      <span>भुगतान इतिहास में अपरिचित प्राप्तकर्ता</span>
+                    </li>
                   </ul>
                 </div>
                 
-                <div className="bg-blue-50 p-5 rounded-xl">
-                  <h3 className="font-semibold text-blue-700 mb-3 flex items-center gap-2">
-                    <Globe className="w-5 h-5" />
-                    Account Activity Indicators
+                <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-2xl shadow-lg border border-blue-200">
+                  <h3 className="font-bold text-blue-700 mb-4 flex items-center gap-2 text-lg">
+                    <Globe className="w-6 h-6" />
+                    खाता गतिविधि संकेतक | Account Activity
                   </h3>
-                  <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                    <li>Unable to login with your credentials</li>
-                    <li>New devices in your account security settings</li>
-                    <li>Changes to security questions or recovery options</li>
-                    <li>Unfamiliar posts or messages sent from your accounts</li>
+                  <ul className="space-y-3 text-slate-700">
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-600 font-bold">•</span>
+                      <span>अपनी साख के साथ लॉगिन करने में असमर्थता</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-600 font-bold">•</span>
+                      <span>सुरक्षा सेटिंग्स में नए डिवाइस</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-600 font-bold">•</span>
+                      <span>सुरक्षा प्रश्नों या रिकवरी विकल्पों में बदलाव</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-600 font-bold">•</span>
+                      <span>आपके खातों से भेजे गए अपरिचित पोस्ट या संदेश</span>
+                    </li>
                   </ul>
                 </div>
                 
-                <div className="bg-purple-50 p-5 rounded-xl">
-                  <h3 className="font-semibold text-purple-700 mb-3 flex items-center gap-2">
-                    <Phone className="w-5 h-5" />
-                    Phone & SMS Indicators
+                <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-2xl shadow-lg border border-purple-200">
+                  <h3 className="font-bold text-purple-700 mb-4 flex items-center gap-2 text-lg">
+                    <Phone className="w-6 h-6" />
+                    फोन और SMS संकेतक | Phone & SMS
                   </h3>
-                  <ul className="list-disc pl-5 space-y-2 text-gray-700">
-                    <li>Unexpected two-factor authentication codes</li>
-                    <li>Calls from companies about account changes</li>
-                    <li>Text messages confirming changes you didn't make</li>
-                    <li>SIM swap warnings from your mobile carrier</li>
+                  <ul className="space-y-3 text-slate-700">
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-600 font-bold">•</span>
+                      <span>अप्रत्याशित द्विकारक प्रमाणीकरण कोड</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-600 font-bold">•</span>
+                      <span>खाता परिवर्तन के बारे में कंपनियों से कॉल</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-600 font-bold">•</span>
+                      <span>ऐसे बदलावों की पुष्टि SMS जो आपने नहीं किए</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-600 font-bold">•</span>
+                      <span>मोबाइल कैरियर से SIM स्वैप चेतावनी</span>
+                    </li>
                   </ul>
                 </div>
               </div>
