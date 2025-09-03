@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { ShieldAlert, AlertTriangle, Bot, Lock, Eye, Users, ChevronDown, ChevronUp, BarChart3, BookOpen, Download, Mail, Shield, TrendingUp, Phone } from "lucide-react";
+import { ShieldAlert, AlertTriangle, Bot, Lock, Eye, Users, ChevronDown, ChevronUp, BarChart3, BookOpen, Download, Mail, Shield, TrendingUp, Phone, ExternalLink, FileText } from "lucide-react";
+import { NavLink } from "react-router-dom";
+import { generateFraudPreventionPDF, openFraudGuideForPrint } from "../../utils/pdfGenerator";
 
 function AccountFraud() {
   const [openSection, setOpenSection] = useState(null);
@@ -322,17 +324,10 @@ function AccountFraud() {
           <h2 className="text-2xl font-semibold text-indigo-700 mb-6 flex items-center justify-center gap-2">
             <BookOpen className="w-6 h-6 text-indigo-500" /> Educational Resources
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-indigo-50 p-6 rounded-xl text-center">
-              <div className="bg-indigo-100 p-3 rounded-full inline-flex items-center justify-center mb-4">
-                <Download className="w-6 h-6 text-indigo-600" />
-              </div>
-              <h3 className="font-semibold text-indigo-700 mb-2">Fraud Prevention Guide</h3>
-              <p className="text-sm text-slate-700">Download our comprehensive guide to protecting yourself from account fraud</p>
-              <button className="mt-4 text-indigo-600 text-sm font-medium">Download PDF</button>
-            </div>
+          <div className="grid grid-cols-1  md:grid-cols-2 gap-6">
+          
             
-            <div className="bg-amber-50 p-6 rounded-xl text-center">
+            <div className="bg-amber-50 p-6  rounded-xl text-center">
               <div className="bg-amber-100 p-3 rounded-full inline-flex items-center justify-center mb-4">
                 <Mail className="w-6 h-6 text-amber-600" />
               </div>
@@ -353,29 +348,7 @@ function AccountFraud() {
         </div>
       </section>
 
-      {/* Call-to-Action */}
-      <div className="max-w-4xl mx-auto text-center">
-        <div className="bg-white rounded-2xl shadow-xl p-10">
-          <h3 className="text-2xl font-bold text-indigo-700 mb-3">
-            Join the National Fight Against Account Fraud
-          </h3>
-          <p className="text-slate-600 mb-6">
-            As fraud techniques evolve, we must combine technology, regulations, and awareness to stay ahead. 
-            Proactive security is not just protection—it's building trust in our financial systems.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-indigo-700 transition">
-              Report Fraud
-            </button>
-            <button className="bg-white text-indigo-600 border border-indigo-600 px-6 py-3 rounded-lg font-semibold shadow-sm hover:bg-indigo-50 transition">
-              Request a Speaker
-            </button>
-            <button className="bg-white text-indigo-600 border border-indigo-600 px-6 py-3 rounded-lg font-semibold shadow-sm hover:bg-indigo-50 transition">
-              Partner With Us
-            </button>
-          </div>
-        </div>
-      </div>
+    
 
       {/* Footer */}
       <footer className="max-w-5xl mx-auto mt-16 text-center text-slate-600 text-sm">

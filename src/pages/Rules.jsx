@@ -335,33 +335,186 @@ export default function Rules() {
         </div>
       </div>
 
-      {/* FIU-IND Role */}
-      <div className="bg-gray-100 py-16">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-blue-800 mb-8">
-            Financial Intelligence Unit – India (FIU-IND)
-          </h2>
-          <p className="text-gray-700 mb-6 leading-relaxed max-w-3xl mx-auto">
-            **FIU-IND** is the central agency responsible for receiving, analyzing, 
-            and disseminating information about suspicious financial transactions.
-          </p>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              "Collect Suspicious Transaction Reports (STRs).",
-              "Monitor large cash transactions.",
-              "Share intelligence with enforcement agencies.",
-              "Support global AML/CFT initiatives.",
-            ].map((point, i) => (
-              <div
-                key={i}
-                className="bg-white rounded-xl shadow-lg p-6 hover:scale-105 transition-transform duration-300"
-              >
-                <h3 className="text-lg font-semibold text-gray-800 mb-3">
-                  Role {i + 1}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{point}</p>
+      {/* FIU-IND Comprehensive Section */}
+      <div className="bg-gradient-to-br from-gray-100 to-blue-100 py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-blue-800 mb-4">
+              वित्तीय खुफिया इकाई – भारत | Financial Intelligence Unit – India (FIU-IND)
+            </h2>
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+              भारत की केंद्रीय वित्तीय खुफिया एजेंसी, मनी लॉन्ड्रिंग और आतंकवादी वित्तपोषण के खिलाफ राष्ट्रीय सुरक्षा का मुख्य स्तंभ।
+            </p>
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed mt-2">
+              India's central financial intelligence agency, the main pillar of national security against money laundering and terrorist financing.
+            </p>
+          </div>
+
+          {/* Core Functions */}
+          <div className="mb-16">
+            <h3 className="text-3xl font-bold text-center text-gray-800 mb-8">मुख्य कार्य | Core Functions</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  icon: <FaDatabase className="text-3xl text-blue-600 mb-3" />,
+                  title: "STR Collection",
+                  titleHindi: "संदिग्ध लेनदेन रिपोर्ट संग्रह",
+                  desc: "Receives and processes over 15 lakh STRs annually from reporting entities"
+                },
+                {
+                  icon: <FaChartLine className="text-3xl text-green-600 mb-3" />,
+                  title: "Intelligence Analysis",
+                  titleHindi: "खुफिया विश्लेषण",
+                  desc: "Advanced data analytics and pattern recognition for financial crime detection"
+                },
+                {
+                  icon: <FaNetworkWired className="text-3xl text-purple-600 mb-3" />,
+                  title: "Information Sharing",
+                  titleHindi: "सूचना साझाकरण",
+                  desc: "Disseminates actionable intelligence to law enforcement and regulatory agencies"
+                },
+                {
+                  icon: <FaFlag className="text-3xl text-orange-600 mb-3" />,
+                  title: "International Cooperation",
+                  titleHindi: "अंतर्राष्ट्रीय सहयोग",
+                  desc: "Collaborates with 164+ FIUs globally through Egmont Group network"
+                }
+              ].map((func, i) => (
+                <div key={i} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
+                  <div className="text-center">
+                    {func.icon}
+                    <h4 className="font-bold text-gray-800 mb-1">{func.title}</h4>
+                    <p className="text-sm text-orange-600 font-semibold mb-3">{func.titleHindi}</p>
+                    <p className="text-xs text-gray-600 leading-relaxed">{func.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Organizational Structure */}
+          <div className="grid md:grid-cols-2 gap-12 mb-16">
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                <FaUniversity className="text-blue-600 mr-3" />
+                Organizational Structure
+              </h3>
+              <div className="space-y-4">
+                <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+                  <h4 className="font-bold text-blue-800">Director</h4>
+                  <p className="text-sm text-blue-700">Overall strategic direction and international relations</p>
+                </div>
+                <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+                  <h4 className="font-bold text-green-800">Analysis Division</h4>
+                  <p className="text-sm text-green-700">STR analysis, pattern recognition, and intelligence production</p>
+                </div>
+                <div className="bg-purple-50 border-l-4 border-purple-500 p-4 rounded">
+                  <h4 className="font-bold text-purple-800">Compliance Division</h4>
+                  <p className="text-sm text-purple-700">Monitoring reporting entity compliance and guidance</p>
+                </div>
+                <div className="bg-orange-50 border-l-4 border-orange-500 p-4 rounded">
+                  <h4 className="font-bold text-orange-800">IT & Systems Division</h4>
+                  <p className="text-sm text-orange-700">Technology infrastructure and data security management</p>
+                </div>
               </div>
-            ))}
+            </div>
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                <FaShieldAlt className="text-green-600 mr-3" />
+                Key Statistics & Impact
+              </h3>
+              <div className="space-y-4">
+                <div className="text-center bg-gradient-to-r from-blue-50 to-blue-100 p-4 rounded-lg">
+                  <div className="text-2xl font-bold text-blue-800">15+ Lakh</div>
+                  <div className="text-sm text-blue-600">STRs processed annually</div>
+                </div>
+                <div className="text-center bg-gradient-to-r from-green-50 to-green-100 p-4 rounded-lg">
+                  <div className="text-2xl font-bold text-green-800">40,000+</div>
+                  <div className="text-sm text-green-600">Reporting entities registered</div>
+                </div>
+                <div className="text-center bg-gradient-to-r from-purple-50 to-purple-100 p-4 rounded-lg">
+                  <div className="text-2xl font-bold text-purple-800">164+</div>
+                  <div className="text-sm text-purple-600">International FIU partnerships</div>
+                </div>
+                <div className="text-center bg-gradient-to-r from-orange-50 to-orange-100 p-4 rounded-lg">
+                  <div className="text-2xl font-bold text-orange-800">₹50,000+ Cr</div>
+                  <div className="text-sm text-orange-600">Assets attached/seized annually</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Reporting Entities */}
+          <div className="mb-16">
+            <h3 className="text-3xl font-bold text-center text-gray-800 mb-8">रिपोर्टिंग संस्थाएं | Reporting Entities</h3>
+            <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {[
+                { name: "Banks", hindi: "बैंक", count: "200+" },
+                { name: "NBFCs", hindi: "गैर-बैंकिंग वित्तीय कंपनियां", count: "9,500+" },
+                { name: "Insurance", hindi: "बीमा कंपनियां", count: "60+" },
+                { name: "Mutual Funds", hindi: "म्यूचुअल फंड", count: "45+" },
+                { name: "Stock Brokers", hindi: "स्टॉक ब्रोकर", count: "1,200+" },
+                { name: "Others", hindi: "अन्य", count: "28,000+" }
+              ].map((entity, i) => (
+                <div key={i} className="bg-white rounded-lg shadow-md p-4 text-center hover:shadow-lg transition-shadow">
+                  <div className="text-lg font-bold text-blue-800">{entity.count}</div>
+                  <div className="text-sm font-semibold text-gray-800">{entity.name}</div>
+                  <div className="text-xs text-orange-600">{entity.hindi}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Technology & Innovation */}
+          <div className="bg-white rounded-xl shadow-lg p-8">
+            <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center justify-center">
+              <FaDatabase className="text-blue-600 mr-3" />
+              प्रौद्योगिकी और नवाचार | Technology & Innovation
+            </h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="text-lg font-bold text-gray-800 mb-4">AI-Powered Detection Systems</h4>
+                <ul className="space-y-2 text-gray-700 text-sm">
+                  <li className="flex items-start">
+                    <FaChartLine className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                    <span>Machine learning algorithms for transaction pattern analysis</span>
+                  </li>
+                  <li className="flex items-start">
+                    <FaChartLine className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                    <span>Real-time risk scoring and anomaly detection</span>
+                  </li>
+                  <li className="flex items-start">
+                    <FaChartLine className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                    <span>Predictive analytics for emerging threats</span>
+                  </li>
+                  <li className="flex items-start">
+                    <FaChartLine className="text-green-500 mt-1 mr-2 flex-shrink-0" />
+                    <span>Network analysis for complex money laundering schemes</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-gray-800 mb-4">Digital India Integration</h4>
+                <ul className="space-y-2 text-gray-700 text-sm">
+                  <li className="flex items-start">
+                    <FaNetworkWired className="text-purple-500 mt-1 mr-2 flex-shrink-0" />
+                    <span>Integration with UPI and digital payment platforms</span>
+                  </li>
+                  <li className="flex items-start">
+                    <FaNetworkWired className="text-purple-500 mt-1 mr-2 flex-shrink-0" />
+                    <span>Real-time monitoring of digital transactions</span>
+                  </li>
+                  <li className="flex items-start">
+                    <FaNetworkWired className="text-purple-500 mt-1 mr-2 flex-shrink-0" />
+                    <span>Blockchain technology for transaction traceability</span>
+                  </li>
+                  <li className="flex items-start">
+                    <FaNetworkWired className="text-purple-500 mt-1 mr-2 flex-shrink-0" />
+                    <span>API integration with fintech and crypto platforms</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
